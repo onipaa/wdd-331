@@ -9,7 +9,7 @@ wdd-331
         index.html
 
 ## ########################################################################## ##
-## Week 1:
+## Week 1: 6 Jan 2024
 ## ########################################################################## ##
 [x] (A-1): Complete Introduction
 [x] (A-2): Syllabus Quiz
@@ -62,3 +62,15 @@ Assignment:
               #content .header h1 {
                   stuff...
               }
+
+Crickets...
+So, am I the only person responding today? I would think that folks would want
+to get a head start instead of cramming everything into the last moments. I've
+gone back to the post and Slack. Nothing, nothing, nothing... Hey! Hey, Hey! I
+feel like the goat in Brother Bear, "No you shut up!..."
+
+Repo Invites:
+- I don't know who will be on my team. I am going to wait to see who is actually
+  going to be active in the class.
+- I invited Sister Noelle Denkers (Teacher)
+

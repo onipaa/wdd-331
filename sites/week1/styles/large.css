@@ -1,0 +1,7 @@
+@import url('/wdd-331/sites/week1/styles/small.css');
+
+@media only screen and (min-width: 651px) {
+    #content {
+        display: grid;
+    }
+}

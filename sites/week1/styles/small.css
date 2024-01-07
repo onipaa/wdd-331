@@ -9,7 +9,7 @@
     }
 
     #content * {
-        background-color: #f6f3ef;
+        background-color: #fff9f2;
         width: 90%;
         margin: auto;
         padding: 5px;
@@ -76,7 +76,7 @@
 
     #content .main .article h2 {
         text-align: center;
-        font-size: 100%;
+        font-size: 125%;
     }
 
     #content .main .article h2 a {
@@ -87,16 +87,39 @@
         width: 100%;
         text-align: center;
         font-size: 90%;
+        margin-bottom: 5px; /* vertical spacing was too tight */
     }
 
     #content .main .article p a {
         color: gray;
     }
 
-    #content .main .article img {
-        width: 125%;
+    #content .main .article .figure {
         align-items: center;
-        padding-left: 0;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: 0;
+        margin: 0;
+    }
+
+/* 
+- The images are still a bit left of center
+- I've looked and the css is correct, but the picture of the book is wonky.
+********************************************************************************
+******** SPOILER ALERT, I'm OCD and this is bugging the heck out of me: ********
+********************************************************************************
+- If I were doing this for reals, I would go get a copy of the image and 
+  manipulate it (cropping etc). This was an exercise in css not image
+  optimization, so I'm forcibly telling myself to let it go.
+*/
+    #content .main .article .figure img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid lightgray;
+        box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
     }
 
     #content .main .article .post-content h2 {

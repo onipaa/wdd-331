@@ -13,7 +13,7 @@ wdd-331
 ## ########################################################################## ##
 [x] (A-1): Complete Introduction
 [x] (A-2): Syllabus Quiz
-[.] (A-3): Assignment
+[>] (A-3): Assignment
 ## ########################################################################## ##
 Introduction: Done, I blabbed a bunch in that document. I hope the fellow 
 students don't think I'm too nerdy.
@@ -77,8 +77,8 @@ Repo Invites:
 ## ########################################################################## ##
 ## Week 1: 7 Jan 2024
 ## ########################################################################## ##
-[ ] (A-2): Assignment
-[ ] (A-1): Church Stuff and the Sabbath
+[.] (A-2): Assignment
+[x] (A-1): Church Stuff and the Sabbath
 ## ########################################################################## ##
 Import CSS:
 I learned about the @import, where the imported library is another CSS. In this
@@ -95,3 +95,13 @@ Other tricks:
   to refresh with a hard-clear of the cache. This has been something that has
   plagued me for some time. I've ended up clearing the cache for the entire
   browser and that was never good for saved passwords and such.
+
+Ok, small is pretty much done. I'll force myself out of it because my O.C.D.
+doesn't like the alignment of some stuff and I could spend way too much time on
+something that may not matter.
+
+Church:
+- Still sick. Kim is making me stay home, but I think that's for the best. It
+  would  make me sad if I got any of the members sick because I just couldn't
+  miss the BoM lesson this week. These are my favorite chapters in 1 Nephi and I
+  did a bunch of research. I will attend in spirit.

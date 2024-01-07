@@ -90,3 +90,8 @@ file:
 - No more loading order issues.
 - Why didn't they teach this before?
 
+Other tricks:
+- While in developer mode, if I "right-click" the refresh icon, I can choose
+  to refresh with a hard-clear of the cache. This has been something that has
+  plagued me for some time. I've ended up clearing the cache for the entire
+  browser and that was never good for saved passwords and such.

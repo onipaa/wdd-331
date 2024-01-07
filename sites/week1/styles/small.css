@@ -3,7 +3,7 @@
 @media only screen and (width >= 100px) and (width <= 650px) {
     #content {
         display: grid;
-        grid-template-columns: 80% 20%;
+        grid-template-columns: 80%;
         font-family: "Young Serif", serif;
     }
 

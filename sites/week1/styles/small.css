@@ -3,14 +3,14 @@
 @media only screen and (width >= 100px) and (width <= 650px) {
     #content {
         display: grid;
-        grid-template-columns: 80%;
+        grid-template-columns: 100%;
         font-family: "Young Serif", serif;
     }
 
     #content * {
         background-color: #f6f3ef;
         margin: auto;
-        width: 75%;
+        width: 90%;
         padding: 5px;
     }
 

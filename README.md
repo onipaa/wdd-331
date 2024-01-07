@@ -74,3 +74,19 @@ Repo Invites:
   going to be active in the class.
 - I invited Sister Noelle Denkers (Teacher)
 
+## ########################################################################## ##
+## Week 1: 7 Jan 2024
+## ########################################################################## ##
+[ ] (A-2): Assignment
+[ ] (A-1): Church Stuff and the Sabbath
+## ########################################################################## ##
+Import CSS:
+I learned about the @import, where the imported library is another CSS. In this
+case large inherits small when I put the following at the start of the large.css
+file:
+
+@import url('/wdd-331/sites/week1/styles/small.css');
+
+- No more loading order issues.
+- Why didn't they teach this before?
+

@@ -5,112 +5,105 @@
     #content {
         display: grid;
         grid-template-columns: 80% 1fr;
-
-        /* font-family: Arial, Helvetica, sans-serif; */
         font-family: "Young Serif", serif;
+    }
 
-        * { 
-            background-color: #f6f3ef;
-            margin: auto;
-            width: 75%;
-            padding: 5px;
+    #content * {
+        background-color: #f6f3ef;
+        margin: auto;
+        width: 75%;
+        padding: 5px;
+    }
 
-        }
+    #content h1 {
+        text-align: center;
+        font-size: 175%;
+        text-decoration: none;
+    }
 
-        h1 {
-            text-align: center;
-            font-size: 175%;
-            text-decoration: none;
+    #content h1 a {
+        color: #333;
+    }
 
-            a {
-                color: #333;
-            }
-        }
+    #content a {
+        text-decoration: none;
+        color: #333;
+    }
 
-        a {
-            text-decoration: none;
-            color: #333
-        }
+    #content .nav {
+        grid-template-columns: 90% 1fr;
+        padding: 0;
+        border: 0;
+        width: 75%;
+        text-align: center;
+    }
 
-        .nav {
-            grid-template-columns: 90% 1fr;
-            padding: 0;
-            border: 0;
-            width: 75%;
-            text-align: center;
+    #content .nav ul,
+    #content .nav ol {
+        list-style-type: none;
+    }
 
-            ul, ol {
-                list-style-type: none;
+    #content .nav ul a,
+    #content .nav ol a {
+        color: gray;
+        font-size: 80%;
+        padding-bottom: 1fr;
+    }
 
-                a {
-                    color: gray;
-                    font-size: 80%;
-                    padding-bottom: 1fr;
+    #content .horizontal-rule {
+        display: block;
+        border-top: 1px solid gray;
+        margin: 20px auto;
+        width: 100%;
+    }
 
-                }
-            }
-        }
+    #content .main {
+        border: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
 
-        .horizontal-rule {
-            display: block;
-            border-top: 1px solid gray;
-            margin: 20px auto;
-            width: 100%;
-        }
+    #content .main .article .post-date {
+        width: 100%;
+        border: 0;
+        margin: 0;
+        padding-left: 5px;
+        padding-right: 0;
+        text-align: right;
+        font-size: 100%;
+    }
 
-        .main {
-            border: 0;
-            margin: 0;
-            padding: 0;
-            width: 100%;
+    #content .main .article h2 {
+        text-align: center;
+        font-size: 100%;
+    }
 
-            .article {
-                .post-date {
-                    width: 100%;
-                    border: 0;
-                    margin: 0;
-                    padding-left: 5px;
-                    padding-right: 0;
-                    text-align: right;
-                    font-size: 100%;
-                }
+    #content .main .article h2 a {
+        color: gray;
+    }
 
-                h2 {
-                    text-align: center;
-                    font-size: 100%;
+    #content .main .article p {
+        width: 100%;
+        text-align: center;
+        font-size: 90%;
+    }
 
-                    a {
-                        color: gray;
-                    }
-                }
+    #content .main .article p a {
+        color: gray;
+    }
 
-                p {
-                    width: 100%;
-                    text-align: center;
-                    font-size: 90%;
+    #content .main .article img {
+        width: 125%;
+        align-items: center;
+        padding-left: 0;
+    }
 
-                    a {
-                        color: gray;
-                    }
-                }
-
-                img {
-                    width: 125%;
-                    align-items: center;
-                    padding-left: 0;
-                }
-
-                .post-content {
-                    h2 {
-                        width: 100%;
-                        border: 0;
-                        margin: 0;
-                        padding: 0;
-                        text-align: center;
-                    }
-                }
-                
-            }
-        }
+    #content .main .article .post-content h2 {
+        width: 100%;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        text-align: center;
     }
 }

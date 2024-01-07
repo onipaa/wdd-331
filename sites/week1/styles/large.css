@@ -3,6 +3,7 @@
 @media only screen and (min-width: 651px) {
     #content {
         display: grid;
-        grid-template-columns: 200px 600px;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: repeat(10,100px);
     }
 }

@@ -105,3 +105,19 @@ Church:
   would  make me sad if I got any of the members sick because I just couldn't
   miss the BoM lesson this week. These are my favorite chapters in 1 Nephi and I
   did a bunch of research. I will attend in spirit.
+
+## ########################################################################## ##
+## Week 1: 8 Jan 2024
+## ########################################################################## ##
+[.] (A-2): Book Club Assignment
+[ ] (A-1): Regular Work (DBA Stuff)
+[ ] (A-3): Find Example Websites Assignment
+## ########################################################################## ##
+Breakpoints (Noelle D 1:17 PM 9 January 2024):
+  - "There are some standard screen sizes, but for this assignment, [there is]
+    no need to worry about an exact large/small breakpoint."
+
+Book Club:
+
+
+Find Example Websites:

@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
 @media only screen and (width >= 100px) and (width <= 650px) {
     #content {
         display: grid;
         grid-template-columns: 100%;
-        font-family: "Young Serif", serif;
+        font-family: "Lora", "Young Serif", serif;
     }
 
     #content * {

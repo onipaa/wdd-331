@@ -46,10 +46,16 @@
 
     #content .nav ul a,
     #content .nav ol a {
-        color: gray;
+        color: #666;
         font-size: 80%;
         padding-bottom: 5px;
     }
+
+    #content .nav old a:active {
+        color: #DEB887;
+    }
+
+
 
     #content .horizontal-rule {
         display: block;

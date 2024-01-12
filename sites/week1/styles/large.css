@@ -85,6 +85,13 @@
                 border-right: 1px solid lightgray
             }
 
+            #content .main .article1 h2 a {
+                display: grid;
+                grid-column: 4/9;
+                width: 500px;
+                text-decoration: none;
+            }
+
             #content .main .article1 .post-content .figure img {
                 display: grid;
                 grid-column: 4/9;

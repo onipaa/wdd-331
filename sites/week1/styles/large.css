@@ -95,12 +95,23 @@
                 grid-column: 2/5;
                 width: 500px;
                 text-decoration: none;
+                color: #333;
+                text-align: center;
             }
 
+            /* I can't see my commit button anymore ... */
+            
             #content .main .article1 .post-content .figure img {
                 display: grid;
                 grid-column: 4/9;
                 height: 300px;
+                align-items: center;
             }
 
+            #content .main .article1 .post-content p {
+                display: grid;
+                color: #333;
+                text-align: center;
+                grid-column: 1/9;
+            };
 }

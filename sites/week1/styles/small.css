@@ -109,16 +109,6 @@
         margin: 0;
     }
 
-/* 
-- The images are still a bit left of center
-- I've looked and the css is correct, but the picture of the book is wonky.
-********************************************************************************
-******** SPOILER ALERT, I'm OCD and this is bugging the heck out of me: ********
-********************************************************************************
-- If I were doing this for reals, I would go get a copy of the image and 
-  manipulate it (cropping etc). This was an exercise in css not image
-  optimization, so I'm forcibly telling myself to let it go.
-*/
     #content .main .article .figure img {
         display: block;
         margin-left: auto;

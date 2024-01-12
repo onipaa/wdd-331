@@ -75,6 +75,7 @@
             display: grid;
             grid-column: 1/9;
             grid-row: 1/7;
+            height: 600px;
         }
 
         .main .article1 .post-content .figure img {

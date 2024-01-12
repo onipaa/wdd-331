@@ -157,6 +157,11 @@ good that I repented. I think the rest of this assignment will go well.
 Large CSS:
 
 
+
 FAVICON:
 I added my cookie monster as in (Johnster My Monster) icon. The web inspector
 kept giving me a 404 because I didn't have it.
+
+Crap-o-la:
+I got my git commits all bunched. I had to do a git push --force. Let's see
+where that gets me. Ok, I'm good to go. Now, I need to get the large css done.

@@ -152,3 +152,11 @@ random. The file looked very unkempt. I was also tired. I committed those hard
 words in a previous release if anyone wants to see them. I stewed on how hard
 the words seemed and vowed to change them. So, here I am at 11:27 PM EST. I feel
 good that I repented. I think the rest of this assignment will go well.
+
+
+Large CSS:
+
+
+FAVICON:
+I added my cookie monster as in (Johnster My Monster) icon. The web inspector
+kept giving me a 404 because I didn't have it.

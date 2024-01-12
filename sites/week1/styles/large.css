@@ -78,8 +78,15 @@
             height: 600px;
         }
 
-        .main .article1 .post-content .figure img {
-            height: 300px;
-        }
+            #content .main .article1 .post-date {
+                display: grid;
+                grid-column: 1/4;
+            }
+
+            #content .main .article1 .post-content .figure img {
+                display: grid;
+                grid-column: 4/9;
+                height: 300px;
+            }
 
 }

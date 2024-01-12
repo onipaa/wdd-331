@@ -100,10 +100,10 @@
             }
 
             /* I can't see my commit button anymore ... */
-            
+
             #content .main .article1 .post-content .figure img {
                 display: grid;
-                grid-column: 4/9;
+                grid-column: 2/5;
                 height: 300px;
                 align-items: center;
             }
@@ -112,6 +112,6 @@
                 display: grid;
                 color: #333;
                 text-align: center;
-                grid-column: 1/9;
+                grid-column: 2/5;
             };
 }

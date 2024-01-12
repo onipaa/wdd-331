@@ -12,6 +12,11 @@
         background-color: #fff9f2;
     }
 
+
+    #content .horizontal-rule {
+        display: none;
+    }
+
     #content .title {
         display: grid;
         grid-column: 1/9;

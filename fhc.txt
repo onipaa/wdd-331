@@ -1,0 +1,41 @@
+computer 1:
+    ip: 192.168.108.75
+    mask: 255.255.252.0
+    gate: 192.168.108.1
+
+    printer: Lexmark mx5190
+        ip: 192.168.108.16
+    printer: Lexmark mx6...
+        ip: 192.168.108.15
+
+
+computer 1 (windows 10)
+computer 2 (Windows 7)
+computer 3 (I didnt' work on this one)
+computer 4 (Windows 7)
+computer 5 spare? broken?
+
+Printers seem fine.
+Hub is standard "dumb" hub -- not a switch
+I setup Kim and Karen to use the printers as well
+
+
+We need to "flash" the machines
+    - Church Sanctioned O.S. (Windows 10)
+    - Latest Updates, Scanners, Security
+    - No more willy-nilly user management
+    - Printers are set, default, not changable
+    - Scanning
+    - Faxing?
+
+Brother Jones
+Sister L
+Sister Harper
+Sister Karen
+
+Others:
+Virginia
+Big O
+Big O's Wife
+
+What about the stuff just stashed (table cloth etc)?

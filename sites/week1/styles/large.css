@@ -115,6 +115,10 @@
                 display: grid;
                 align-items: center;
                 margin: auto;
+                border: 1px solid lightgray;
+                box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+                    -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
             }
 
             #content .main .article1 .post-content p {

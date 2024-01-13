@@ -87,7 +87,7 @@
     #content .main {
         display: grid;
         grid-column: 1/9;
-        grid-row: 3/15;
+        grid-row: 2/15;
         height: 1200px;
         width: 800px;
     }

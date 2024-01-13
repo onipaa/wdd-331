@@ -99,6 +99,14 @@
                 text-align: center;
             }
 
+            #content .main .article1 .post-content {
+                display: grid;
+                grid-column: 1/5;
+                grid-row: 2/5;
+                height: 600px;
+                border-left: 1px solid lightgray;;
+            }
+
             #content .main .article1 .post-content .figure {
                 display: grid;
                 grid-column: 2/5;

@@ -86,9 +86,10 @@
             #content .main .article1 h2 .post-date {
                 display: grid;
                 grid-column: 1/2;
+                grid-row: 1/4;
                 grid-row: span;
                 width: 200px;
-                height: 500px;
+                height: 600px;
                 border-right: 1px solid lightgray;
                 z-index: 99;
             }

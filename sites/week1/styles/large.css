@@ -33,7 +33,7 @@
         width: 800px;
     }
 
-    #content .title .h1 .a {
+    #content .title .h1 a {
         display: grid;
         text-decoration: none;
         text-align: center;

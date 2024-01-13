@@ -120,8 +120,10 @@
             #content .main .article1 .post-content p {
                 display: grid;
                 color: #333;
-                text-align: center;
+                text-align: justify;
                 grid-column: 2/5;
                 width: 600px;
+                border-left: 20px;
+                border-right: 20px;
             };
 }

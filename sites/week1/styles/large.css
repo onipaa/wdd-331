@@ -23,13 +23,14 @@
         grid-row: 1/2;
         width: 800px;
         height: 200px;
+        text-align: center;
+        color: #333;
     }
 
     #content .title .h1 {
         display:grid;
         grid-column: 1/9;
         width: 800px;
-        text-align: center;
     }
 
     #content .title .h1 .a {

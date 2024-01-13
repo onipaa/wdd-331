@@ -147,12 +147,14 @@
                 padding-left: 25px;
                 padding-right: 25px;
             };
-            /* article 2 */
 
+        /* **************************************** 
+        article 2
+        **************************************** */
         #content .main .article2 {
             display: grid;
-            grid-column: 1/9;
-            grid-row: 9/15;
+            grid-column: 1;
+            grid-row: 9;
             width: 800px;
             height: 600px;
             grid-template-columns: repeat(4, 200px);

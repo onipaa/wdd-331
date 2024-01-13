@@ -148,4 +148,14 @@
                 padding-right: 25px;
             };
             /* article 2 */
+
+            #content .main .article2 {
+                display: grid;
+                grid-column: 1/9;
+                grid-row: 9/16;
+                height: 600px;
+                grid-template-columns: repeat(4, 200px);
+                grid-template-rows: repeat(4, 200px);
+            }
+    
 }

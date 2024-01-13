@@ -27,30 +27,30 @@
         color: #333;
     }
 
-    #content .title .h1 {
+    #content .title h1 {
         display:grid;
         grid-column: 1/9;
         width: 800px;
     }
 
-    #content .title .h1 a {
+    #content .title h1 a {
         display: grid;
         text-decoration: none;
         text-align: center;
         color: #333;
     }
 
-        #content .title .h1 .a:hover {
+        #content .title h1 .a:hover {
             color: #333;
             text-decoration: none;
         }
 
-        #content .title .h1 .a:link {
+        #content .title h1 .a:link {
             color: #333;
             text-decoration: none;
         }
 
-        #content .title .h1 .a:visited {
+        #content .title h1 .a:visited {
             color: #333;
             text-decoration: none;
         }

@@ -88,7 +88,7 @@
                 grid-column: 1/2;
                 width: 200px;
                 height: 500px;
-                border-right: 1px solid lightgray
+                border-right: 1px solid lightgray;
             }
 
             #content .main .article1 h2 a {

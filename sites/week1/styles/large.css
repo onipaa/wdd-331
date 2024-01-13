@@ -95,7 +95,7 @@
         #content .main .article1 {
             display: grid;
             grid-column: 1/9;
-            grid-row: 3/9;
+            grid-row: 3/10;
             height: 600px;
             grid-template-columns: repeat(4, 200px);
             grid-template-rows: repeat(4, 200px);
@@ -152,7 +152,7 @@
             #content .main .article2 {
                 display: grid;
                 grid-column: 1/9;
-                grid-row: 9/16;
+                grid-row: 10/16;
                 height: 600px;
                 grid-template-columns: repeat(4, 200px);
                 grid-template-rows: repeat(4, 200px);

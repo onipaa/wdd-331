@@ -36,7 +36,24 @@
     #content .title .h1 .a {
         display: grid;
         text-decoration: none;
+        text-align: center;
+        color: #333;
     }
+
+        #content .title .h1 .a:hover {
+            color: #333;
+            text-decoration: none;
+        }
+
+        #content .title .h1 .a:link {
+            color: #333;
+            text-decoration: none;
+        }
+
+        #content .title .h1 .a:visited {
+            color: #333;
+            text-decoration: none;
+        }
 
     #content .nav {
         display: grid;

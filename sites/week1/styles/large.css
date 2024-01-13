@@ -182,7 +182,7 @@
                 border-bottom: 1px solid lightgray;
             }
 
-            #content .main .article2 h2 a {
+            #content .main .article2 {
                 display: grid;
                 grid-column: 1;
                 grid-row: 2;
@@ -190,6 +190,13 @@
                 text-decoration: none;
                 color: #333;
                 text-align: center;
+            }
+
+            #content .main .article2 .post-content h2 {
+                display: grid;
+                text-align: center;
+                grid-column: 2/5;
+                width: 550px;
             }
 
             #content .main .article2 .post-content .figure {

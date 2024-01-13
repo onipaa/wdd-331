@@ -90,6 +90,7 @@
                 width: 200px;
                 height: 500px;
                 border-right: 1px solid lightgray;
+                z-index: 99;
             }
 
             #content .main .article1 h2 a {

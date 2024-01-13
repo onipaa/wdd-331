@@ -181,11 +181,11 @@
                 height: 600px;
                 border-bottom: 1px solid lightgray;
             }
-            
+
             #content .main .article2 h2 a {
                 display: grid;
                 grid-column: 2/5;
-                width: 600px;
+                width: 550px;
                 text-decoration: none;
                 color: #333;
                 text-align: center;

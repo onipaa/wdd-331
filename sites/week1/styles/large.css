@@ -99,13 +99,15 @@
                 text-align: center;
             }
 
-            /* I can't see my commit button anymore ... */
+            #content .main .article1 .post-content .figure {
+                display: grid;
+                grid-column: 2/5;
+                grid-row: 2/5;
+                align-items: center;
+            }
 
             #content .main .article1 .post-content .figure img {
                 display: grid;
-                grid-column: 2/5;
-                height: 300px;
-                align-items: center;
             }
 
             #content .main .article1 .post-content p {

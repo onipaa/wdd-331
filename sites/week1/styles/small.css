@@ -87,7 +87,15 @@
     }
 
     #content .main .article h2 a {
-        color: gray;
+        color: #333;
+    }
+
+    #content .main .article h2 a:hover {
+        color: #333;
+    }
+
+    #content .main .article h2 a:visited {
+        color: #333;
     }
 
     #content .main .article p {

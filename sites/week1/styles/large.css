@@ -220,6 +220,33 @@
                 width: 550px;
             }
 
+            #content .main .article2 .post-content h2 a {
+                display: grid;
+                text-align: center;
+                grid-column: 2/5;
+                color: #333;
+                text-decoration: none;
+                width: 550px;
+            }
+
+            #content .main .article2 .post-content h2 a:hover {
+                display: grid;
+                text-align: center;
+                grid-column: 2/5;
+                text-decoration: none;
+                color: #333;
+                width: 550px;
+            }
+
+            #content .main .article2 .post-content h2 a:visited {
+                display: grid;
+                text-align: center;
+                grid-column: 2/5;
+                color: #333;
+                text-decoration: none;
+                width: 550px;
+            }
+
             #content .main .article2 .post-content .figure {
                 display: grid;
                 grid-column: 2/5;

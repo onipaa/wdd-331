@@ -165,3 +165,214 @@ kept giving me a 404 because I didn't have it.
 Crap-o-la:
 I got my git commits all bunched. I had to do a git push --force. Let's see
 where that gets me. Ok, I'm good to go. Now, I need to get the large css done.
+
+## ########################################################################## ##
+## Week 2: 15 Jan 2024
+## ########################################################################## ##
+[x] (A-1): Turned in all assignemnt from W1 (on time) 100% so far
+[ ] (A-2): Book Club Assignment
+[ ] (A-3): Find Example Websites Assignment
+[x] (A-4): Install software
+## ########################################################################## ##
+Installs:
+john_harper/school-work  > brew install node
+john_harper/school-work  > node -v
+v21.5.0
+
+
+john_harper/school-work  > brew install npm
+Warning: node 21.5.0 is already installed and up-to-date.
+To reinstall 21.5.0, run:
+  brew reinstall node
+john_harper/school-work  > npm -v
+10.2.4
+
+john_harper/school-work  > npm install -g stylelint stylelint-config-standard
+john_harper/school-work  > npm install -g npm@10.3.0
+john_harper/school-work  > npm install -g analyze-css
+
+john_harper/school-work  > npm install -g uncss
+
+Zombies:
+conflicting CSS rules. Only one wins/survives based on specificity. If rules do
+not contradict, then all will be applied.
+
+Least --> Most Specific (wins)
+
+default (lowest) --> external (next) --> in HTML <style> tags (next) --> inline
+with html tag (highest) --> can use !important to raise even more.
+
+Example:
+## -------------------------------------------------------------------------- ##
+#zombie-killa p a { 
+     color: black;
+} 
+
+.talkin-smack div .verbal a { 
+     color: red;
+}
+
+These two selectors want to change the "a" tag.
+
+#zombie-killa (a single element ID selector)
+.zombie-killa (a multiple element CLASS selector)
+
+The # wins . because it is more specific.
+
+
+(A) #zombie-killa (id=100) + p (element=1) + a (element=1) = 102 
+(B) .talkin-smack (class=10) + div (element=1) + .verbal (class=10) + a (element=1) = 22
+
+A > B means A wins.
+## -------------------------------------------------------------------------- ##
+#zombie-killa .talkin-smack a { 
+     color: black;
+} 
+
+#zombie-killa div .verbal a { 
+     color: red;
+}
+
+(A) #zombie-killa .talkin-smack a = 111 
+    100 + 10 + 1
+
+(B) #zombie-killa div .verbal a = 112
+    100 + 1 + 10 + 1
+
+B > A means B wins.
+## -------------------------------------------------------------------------- ##
+#zombie-killa div.ima.talkin-smack a { 
+     color: black;
+}
+
+#zombie-killa div .verbal a { 
+     color: red !important;
+}
+
+## ########################################################################## ##
+RANT:
+The !important; attribute trumps all, like the golden snitch. Weird scoring
+system. Everyone gets stinking points but whomever gets the snitch wins the 
+game. I'm wondering... what if Slytherin score 50000 points and then Hufflepuff
+got the snitch. What would be the point in all that? Slytherin kicked the living
+snot out of Hufflepuff, but huffelpuff wins? Sounds like Communism to me.
+## ########################################################################## ##
+
+
+Sitepoint (https://www.sitepoint.com/premium-for-teams/#knowledge):
+I completed the first page. When I tried to click into other pages, it said I 
+have to become a member. I've asked for an educational license. Maybe they will
+give it to me, maybe not.
+
+
+Smashing Magazine (https://www.smashingmagazine.com/2007/07/css-specificity-things-you-should-know/):
+Apart from Floats, the CSS Specificity is one of the most difficult concepts to
+grasp in Cascading Stylesheets. The different weight of selectors is usually the
+reason why your CSS-rules don’t apply to some elements, although you think they 
+should have. In order to minimize the time for bug hunting you need to 
+understand, how browsers interpret your code. And to understand that, you need 
+to have a firm understanding on how specificity works.
+
+CSS Specificity: An Overview #
+Specificity determines, which CSS rule is applied by the browsers.
+Specificity is usually the reason why your CSS-rules don’t apply to some elements, although you think they should.
+Every selector has its place in the specificity hierarchy.
+If two selectors apply to the same element, the one with higher specificity wins.
+There are five distinct categories which define the specificity level of a given selector: inline styles, IDs, classes, attributes, and elements.
+You can understand specificity if you love Star Wars: CSS Specificity Wars.
+You can understand specificity if you love poker: CSS Specificity for Poker Players
+When selectors have an equal specificity value, the latest rule is the one that counts.
+When selectors have an unequal specificity value, the more specific rule is the one that counts.
+Rules with more specific selectors have a greater specificity.
+The last rule defined overrides any previous, conflicting rules.
+The embedded style sheet has a greater specificity than other rules.
+ID selectors have a higher specificity than attribute selectors.
+You should always try to use IDs to increase the specificity.
+A class selector beats any number of element selectors.
+The universal selector and inherited selectors have a specificity of 0, 0, 0, 0.
+You can calculate CSS specificity with CSS Specificity Calculator.
+
+CSS’ barrier to entry is extremely low, mainly due to the nature of its syntax. Being clear and easy to understand, the syntax makes sense even to the inexperienced Web designer. It’s so simple, in fact, that you could style a simple CSS-based website within a few hours of learning it.
+CSS’ barrier to entry is extremely low, mainly due to the nature of its syntax. Being clear and easy to understand, the syntax makes sense even to the inexperienced Web designer. It’s so simple, in fact, that you could style a simple CSS-based website within a few hours of learning it.
+
+But this apparent simplicity is deceitful. If after a few hours of work, your perfectly crafted website looks great in Safari, all hell might break loose if you haven’t taken the necessary measures to make it work in Internet Explorer. In a panic, you add hacks and filters where only a few tweaks or a different approach might do. Knowing how to deal with these issues comes with experience, with trial and error and with failing massively and then learning the correct way.
+
+Understanding a few often overlooked concepts is also important. The concepts may be hard to grasp and look boring at first, but understanding them and knowing how to take advantage of them is important.
+
+* + *
+
+Despite its irreverent name and precarious form, the lobotomized owl selector is no mere thought experiment for me. It is the result of ongoing experimentation into automating the layout of flow content. The owl selector is an “axiomatic” selector with a voracious purview. As such, many will be hesitant to use it, and it will terrify some that I include it in production code. I aim to demonstrate how the selector can reduce bloat, speed up development, and help automate the styling of arbitrary, dynamic content.
+
+Bloat
+Regardless of whether you can create and maintain presentational markup, the question of whether you should remains. Adding presentational ciphers to your previously terse markup necessarily engorges it, but what’s the tradeoff? Does this allow us to reduce bloat in the stylesheet?
+
+By choosing to style entirely in terms of named elements, we make the mistake of asserting that HTML elements exist in a vacuum, not subject to inheritance or commonality. By treating the element as “this thing that needs to be styled,” we are liable to redundantly set some values for the element in hand that should have already been defined higher in the cascade. Adding new modules to a project invites bloat, which is a hard thing to keep in check.
+
+## ************************************************************************** ##
+Ok, if I'm reading right, I can use * + * for rules that need to be applied 
+every where, like this:
+
+* + * {
+    top-margin: 1.5em;
+}
+
+Means everything will get a 1.5em top margin.
+
+## ************************************************************************** ##
+
+Wikipedia:
+Fifteen years later, it was evident the term separation of concerns was becoming an accepted idea. In 1989, Chris Reade wrote a book titled Elements of Functional Programming[7] that describes separation of concerns:
+
+The programmer is having to do several things at the same time, namely,
+
+1. describe what is to be computed;
+2. organise the computation sequencing into small steps;
+3. organise memory management during the computation.
+
+flukeout.github.io
+
+# https://flukeout.github.io/ #
+
+01. plate
+02. bento
+03. #fancy
+04. plate apple
+05. #fancy pickle
+06. .small
+07. orange.small
+08. bento orange.small
+09. plate, bento
+10. *
+11. plate *
+12. plate + apple
+13. bento ~ pickle
+14. plate > apple
+15. orange:first-child
+16. plate apple:only-child, plate pickle:only-child
+17. .small:last-child
+18. plate:nth-child(3)
+19. bento:nth-last-child(3)
+20. apple:first-of-type
+21. plate:nth-of-type(even)
+22. plate:nth-of-type(2n+3)
+23. plate apple:only-of-type
+24. orange:last-of-type, apple:last-of-type
+25. bento:empty
+26. apple:not(.small)
+27. *[for]
+28. plate[for]
+29. bento[for="Vitaly"]
+30. *[for^="Sa"]
+31. *[for$="ato"]
+32. bento[for*="obb"]
+
+
+You can use only one pseudo-element in a selector. The pseudo-element must appear after all the other components in the complex or compound selector in which it appears. For example, you can select a paragraph's first line using p::first-line but not the first-line's children or a hovered first line. So both p::first-line > * and p::first-line:hover are invalid.
+
+x y (decendant)
+x > y (direct child)
+x + y (adjacent)
+x ~ y (general selector)
+
+Um, the Quiz:
+It's not easy. I only get three attempts. I am able to screenshot the questions and then go research.

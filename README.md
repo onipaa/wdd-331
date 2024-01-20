@@ -35,4 +35,7 @@ Now, we're six months down the road and I just got blindsided by a request,
 hair-on-fire, to partition the customer_likes table per week. Being 55 years
 old and having COVID brain, I have to rely on my linux/unix skills. I can 
 simply do:
-    $ grep -i "customer_likes" * ## and see where my notes are.
+    $ grep -i "customer_likes" * ## and see where my notes are.f
+
+Greps can get much more complex and use regular expressions if needed. But, 
+most of the time, simple greps get me to the files I need.

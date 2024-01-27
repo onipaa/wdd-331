@@ -1,0 +1,10 @@
+body {
+  background-color: darkred;
+}
+
+body form {
+  background-color: white;
+}
+body form fieldset input {
+  background-color: lightgray;
+}/*# sourceMappingURL=styles.css.map */

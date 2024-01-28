@@ -1,26 +1,45 @@
 $breakpoint-small: 600px;
-$breakpoint-med-small: 700px;
-$breakpoint-med: 800px;
-$breakpoint-large: 1200px;
+$breakpoint-medium: 800px;
+$breakpoint-large: 1000px;
 
-@mixin color-scheme($scheme) {
-    $form-background-color: map-get($scheme, $form-background-color);
-    $form-color: map-get($scheme, $form-color);
-    $input-color: map-get($scheme, $input-color);
-  
-    body {
-      background-color: $body-background-color;
-      color: $body-color;
+$body-background-color: white;
+$body-color: #FFFFFF;
+
+@mixin screen($size, $type: max, $pixels: $breakpoint-small) {
+    @if $size == 'small' {
+        @media screen and (#{$type}-width: $breakpoint-small) {
+            @content;
+        }
     }
-  
-    // Apply colors to your form and input elements
-    .form {
-      background-color: $form-background-color;
-      color: $form-color;
-  
-      input {
-        color: $input-color;
-      }
+    @else if $size == 'medium' {
+        @media screen and (#{$type}-width: $breakpoint-medium) {
+            @content;
+        }
+    }
+    @else if $size == 'large' {
+        @media screen and (#{$type}-width: $breakpoint-large) {
+            @content;
+        }
+    }
+    @else {
+        @content;
     }
 }
-  
+
+@include screen('small') {
+    $form-background-color: #E5BB89;
+    $form-color: #6F5D44;
+    $input-color: #CCC5B7;
+}
+
+@include screen('medium') {
+    $form-background-color: #E5BB89;
+    $form-color: #6F5D44;
+    $input-color: #CCC5B7;
+}
+
+@include screen('large') {
+    $form-background-color: #E5BB89;
+    $form-color: #6F5D44;
+    $input-color: #CCC5B7;
+}

@@ -2,11 +2,13 @@ $breakpoint-small: 600px;
 $breakpoint-med-small: 700px;
 $breakpoint-med: 800px;
 $breakpoint-large: 1200px;
-$body-background-color: wheat;
-$body-color: rgb(54, 51, 51);
-$form-background-color: gold;
-$form-color: black;
-$input-color: lightgray;
+
+$body-background-color: #CCC5B7;
+$body-color: #FFFFFF;
+$form-background-color: #E5BB89;
+$form-color: #6F5D44;
+$input-color: #CCC5B7;
+
 
 // Define the breakpoints, using @content as a placeholder for what I'll code below
 // this block.
@@ -42,6 +44,82 @@ $input-color: lightgray;
 }
 
 @include screen('small') {
+    body {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        background-color: $body-background-color;
+        color: $body-color;
+
+        form {
+            display: grid;
+            grid-column: auto;
+            grid-row: auto;
+            background-color: $form-background-color;
+            fieldset {
+                color: $form-color;
+
+                input,
+                textarea {
+                    background-color: $input-color;
+                    color: $form-color;
+                }
+            }
+        }
+    }
+}
+
+/*
+Ana Cvetkovick, Nov 17,2023 (Wix Blog), 7 Website Color Trends that'll be Everywhere in 2024
+    url: https://www.wix.com/blog/website-color-trends?utm_source=google&utm_medium=cpc&utm_campaign=12188669214^114296906861^search%20-%20dsa&experiment_id=^^497047742394^&gclid=CjwKCAiA8NKtBhBtEiwAq5aX2L_kTc2t0DbgO8o96HM34U3aqnCFMklNrncnHkjg-wVGfyjOkKnSMxoCfVYQAvD_BwE
+    date-accessed: 27 January 2024
+
+    Luminous Red (small)
+    Metallic Gray (med-small)
+    Mud (starter-generic)
+        
+*/
+
+
+@include screen('small') {
+    $body-background-color: #E94823;
+    $body-color: #000000;
+    $form-background-color: #FFFFFF;
+    $form-color: #000000;
+    $input-color: #D8D8D8;
+
+    body {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        background-color: $body-background-color;
+        color: $body-color;
+
+        form {
+            display: grid;
+            grid-column: auto;
+            grid-row: auto;
+            background-color: $form-background-color;
+            fieldset {
+                color: $form-color;
+
+                input,
+                textarea {
+                    background-color: $input-color;
+                    color: $form-color;
+                }
+            }
+        }
+    }
+}
+
+@include screen('med-small') {
+    $body-background-color: #000000;
+    $body-color: #FFFFFF;
+    $form-background-color: #8A3F7F;
+    $form-color: #FFFFFF;
+    $input-color: #CACACA;
+
     body {
         display: grid;
         grid-template-columns: auto;

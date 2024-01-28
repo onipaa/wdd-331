@@ -3,22 +3,78 @@
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    background-color: wheat;
-    color: rgb(54, 51, 51);
+    background-color: #CCC5B7;
+    color: #FFFFFF;
   }
   body form {
     display: grid;
     grid-column: auto;
     grid-row: auto;
-    background-color: gold;
+    background-color: #E5BB89;
   }
   body form fieldset {
-    color: black;
+    color: #6F5D44;
   }
   body form fieldset input,
   body form fieldset textarea {
-    background-color: lightgray;
-    color: black;
+    background-color: #CCC5B7;
+    color: #6F5D44;
+  }
+}
+/*
+Ana Cvetkovick, Nov 17,2023 (Wix Blog), 7 Website Color Trends that'll be Everywhere in 2024
+    url: https://www.wix.com/blog/website-color-trends?utm_source=google&utm_medium=cpc&utm_campaign=12188669214^114296906861^search%20-%20dsa&experiment_id=^^497047742394^&gclid=CjwKCAiA8NKtBhBtEiwAq5aX2L_kTc2t0DbgO8o96HM34U3aqnCFMklNrncnHkjg-wVGfyjOkKnSMxoCfVYQAvD_BwE
+    date-accessed: 27 January 2024
+
+    Luminous Red (small)
+    Metallic Gray (med-small)
+    Mud (starter-generic)
+
+*/
+@media screen and (max-width: 600px) {
+  body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    background-color: #E94823;
+    color: #000000;
+  }
+  body form {
+    display: grid;
+    grid-column: auto;
+    grid-row: auto;
+    background-color: #FFFFFF;
+  }
+  body form fieldset {
+    color: #000000;
+  }
+  body form fieldset input,
+  body form fieldset textarea {
+    background-color: #D8D8D8;
+    color: #000000;
+  }
+}
+@media screen and (max-width: 700px) {
+  body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    background-color: #000000;
+    color: #FFFFFF;
+  }
+  body form {
+    display: grid;
+    grid-column: auto;
+    grid-row: auto;
+    background-color: #8A3F7F;
+  }
+  body form fieldset {
+    color: #FFFFFF;
+  }
+  body form fieldset input,
+  body form fieldset textarea {
+    background-color: #CACACA;
+    color: #FFFFFF;
   }
 }
 

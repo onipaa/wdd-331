@@ -1,16 +1,7 @@
-//colors
-$body-color: yellow;
-$body-background-color: darkred;
-$form-background-color: white;
-$form-color: black;
-$input-color: lightgray;
-$headlines-color : lightgray;
-
 // Define your breakpoints
 $breakpoint-small: 600;
 $breakpoint-med-small: 700px;
-$breakpoint-med: 800px;
-$breakpoint-large: 900px;
+$breakpoint-other: 800px;
 
 // Define the breakpoints, using @content as a placeholder for what I'll code below
 // this block.
@@ -25,9 +16,8 @@ $breakpoint-large: 900px;
             @content;
         }
     }
-    // ... (other conditions)
-    @else if $size == 'custom' {
-        @media screen and (#{$type}-width: #{$pixels + px}) {
+    @else if $size == 'other' {
+        @media screen and (#{$type}-width: #{$breakpoint-other + px}) {
             @content;
         }
     }
@@ -63,37 +53,6 @@ $breakpoint-large: 900px;
         }
     }
 }
-
-@include screen('med-small') {
-    // Same content as 'small' or customize as needed
-}
-
-@include screen('medium') {
-    body {
-        display: grid;
-        grid-template-columns: repeat(6, 100px);
-        grid-template-rows: auto;
-        background-color: $body-background-color; // Use the variable
-        color: black;
-
-        form {
-            background-color: $form-background-color;
-            fieldset {
-                color: #f8ad9d;
-
-                input {
-                    background-color: $input-color;
-                    color: #ffdab9;
-                }
-                textarea {
-                    background-color: #ffdab9; // You might want to use $input-color here as well
-                    color: black;
-                }
-            }
-        }
-    }
-}
-
 
 /*
 REFERENCES APA Style:

@@ -1,31 +1,57 @@
-/*
-REFERENCES APA Style:
-    Justin Brazeau, Topal Developers (No Date), SASS Mixins Keep Your Stylesheets Dry
-        https://www.toptal.com/css/sass-mixins-keep-your-stylesheets-dry
-        Accessed: 25 January 2024 19:41:00    
-*/
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600) {
   body {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: repeat(6, 100px);
     grid-template-rows: auto;
-    background-color: darkred;
-    color: yellow;
+    background-color: #e27396;
+    color: black;
   }
   body form {
     background-color: white;
   }
   body form fieldset {
-    color: black;
+    color: #ea9ab2;
   }
   body form fieldset input {
     background-color: lightgray;
-    color: black;
+    color: #b3dee2;
   }
   body form fieldset textarea {
     background-color: lightgray;
     color: black;
   }
 }
+body {
+  display: grid;
+  grid-template-columns: repeat(6, 100px);
+  grid-template-rows: auto;
+  background-color: darkred;
+  color: black;
+}
+body form {
+  background-color: white;
+}
+body form fieldset {
+  color: #f8ad9d;
+}
+body form fieldset input {
+  background-color: lightgray;
+  color: #ffdab9;
+}
+body form fieldset textarea {
+  background-color: #ffdab9;
+  color: black;
+}
+
+/*
+REFERENCES APA Style:
+    Justin Brazeau, Topal Developers (No Date), SASS Mixins Keep Your Stylesheets Dry
+        https://www.toptal.com/css/sass-mixins-keep-your-stylesheets-dry
+        Accessed: 25 January 2024 19:41:00    
+
+    Jennifer Gaskin, Venngage (November 30, 2022), 20+ Best Pastel Color Palettes for 2024    
+        https://venngage.com/blog/pastel-color-palettes/
+        Accessed: 27 January 2024 22:55:00
+*/
 
 /*# sourceMappingURL=styles.css.map */

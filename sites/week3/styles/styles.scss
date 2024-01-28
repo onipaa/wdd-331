@@ -16,27 +16,18 @@ $breakpoint-large: 900px;
 // this block.
 @mixin screen($size, $type: max, $pixels: $breakpoint-small) {
     @if $size == 'small' {
-        @media screen and ($type + -width: $breakpoint-small) {
+        @media screen and (#{$type}-width: #{$breakpoint-small}) {
             @content;
         }
     }
     @else if $size == 'med-small' {
-        @media screen and ($type + -width: $breakpoint-med-small) {
+        @media screen and (#{$type}-width: #{$breakpoint-med-small}) {
             @content;
         }
     }
-    @else if $size == 'med' {
-        @media screen and ($type + -width: $breakpoint-med) {
-            @content;
-        }
-    }
-    @else if $size == 'large' {
-        @media screen and ($type + -width: $breakpoint-med) {
-            @content;
-        }
-    }
+    // ... (other conditions)
     @else if $size == 'custom' {
-        @media screen and ($type + -width: $pixels + px) {
+        @media screen and (#{$type}-width: #{$pixels + px}) {
             @content;
         }
     }
@@ -48,8 +39,7 @@ $breakpoint-large: 900px;
 // Ok, now to code a mixin where I'm stipulating the colors and such for small
 // screen sizes.
 @include screen('small') {
-    body {   
-
+    body {
         display: grid;
         grid-template-columns: repeat(6, 100px);
         grid-template-rows: auto;
@@ -67,47 +57,23 @@ $breakpoint-large: 900px;
                 }
                 textarea {
                     background-color: $input-color;
-                    color: blackr;
+                    color: black;
                 }
             }
         }
     }
-} 
+}
 
-@include screen('small') {
-    body {   
-
-        display: grid;
-        grid-template-columns: repeat(6, 100px);
-        grid-template-rows: auto;
-        background-color: #e27396;
-        color: black;
-
-        form {
-            background-color: $form-background-color;
-            fieldset {
-                color: #ea9ab2;
-
-                input {
-                    background-color: $input-color;
-                    color: #b3dee2;
-                }
-                textarea {
-                    background-color: $input-color;
-                    color: blackr;
-                }
-            }
-        }
-    }   
+@include screen('med-small') {
+    // Same content as 'small' or customize as needed
 }
 
 @include screen('medium') {
-    body {   
-
+    body {
         display: grid;
         grid-template-columns: repeat(6, 100px);
         grid-template-rows: auto;
-        background-color: #f08080;
+        background-color: $body-background-color; // Use the variable
         color: black;
 
         form {
@@ -120,12 +86,12 @@ $breakpoint-large: 900px;
                     color: #ffdab9;
                 }
                 textarea {
-                    background-color: #ffdab9;
-                    color: blackr;
+                    background-color: #ffdab9; // You might want to use $input-color here as well
+                    color: black;
                 }
             }
         }
-    }   
+    }
 }
 
 

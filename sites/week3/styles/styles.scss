@@ -1,18 +1,3 @@
-//colors
-$body-color: yellow;
-$body-background-color: darkred;
-$form-background-color: white;
-$form-color: black;
-$input-color: lightgray;
-$headlines-color : lightgray;
-
-/*
-REFERENCES APA Style:
-    Justin Brazeau, Topal Developers (No Date), SASS Mixins Keep Your Stylesheets Dry
-        https://www.toptal.com/css/sass-mixins-keep-your-stylesheets-dry
-        Accessed: 25 January 2024 19:41:00    
-*/
-
 // Define your breakpoints
 $breakpoint-small: 600px;
 $breakpoint-med-small: 700px;
@@ -23,27 +8,27 @@ $breakpoint-large: 1200px;
 // this block.
 @mixin screen($size, $type: max, $pixels: $breakpoint-small) {
     @if $size == 'small' {
-        @media screen and ($type + -width: $breakpoint-small) {
+        @media screen and (#{$type}-width: $breakpoint-small) {
             @content;
         }
     }
     @else if $size == 'med-small' {
-        @media screen and ($type + -width: $breakpoint-med-small) {
+        @media screen and (#{$type}-width: $breakpoint-med-small) {
             @content;
         }
     }
     @else if $size == 'med' {
-        @media screen and ($type + -width: $breakpoint-med) {
+        @media screen and (#{$type}-width: $breakpoint-med) {
             @content;
         }
     }
     @else if $size == 'large' {
-        @media screen and ($type + -width: $breakpoint-med) {
+        @media screen and (#{$type}-width: $breakpoint-large) {
             @content;
         }
     }
     @else if $size == 'custom' {
-        @media screen and ($type + -width: $pixels + px) {
+        @media screen and (#{$type}-width: #{$pixels}px) {
             @content;
         }
     }
@@ -55,8 +40,7 @@ $breakpoint-large: 1200px;
 // Ok, now to code a mixin where I'm stipulating the colors and such for small
 // screen sizes.
 @include screen('small') {
-    body {   
-
+    body {
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: auto;
@@ -68,10 +52,7 @@ $breakpoint-large: 1200px;
             fieldset {
                 color: $form-color;
 
-                input {
-                    background-color: $input-color;
-                    color: $form-color;
-                }
+                input,
                 textarea {
                     background-color: $input-color;
                     color: $form-color;
@@ -79,4 +60,4 @@ $breakpoint-large: 1200px;
             }
         }
     }
-}    
+}

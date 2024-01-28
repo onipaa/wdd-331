@@ -1,80 +1,26 @@
-/*
-Ana Cvetkovick, Nov 17,2023 (Wix Blog), 7 Website Color Trends that'll be Everywhere in 2024
-    url: https://www.wix.com/blog/website-color-trends?utm_source=google&utm_medium=cpc&utm_campaign=12188669214^114296906861^search%20-%20dsa&experiment_id=^^497047742394^&gclid=CjwKCAiA8NKtBhBtEiwAq5aX2L_kTc2t0DbgO8o96HM34U3aqnCFMklNrncnHkjg-wVGfyjOkKnSMxoCfVYQAvD_BwE
-    date-accessed: 27 January 2024
-
-    Luminous Red (small)
-    Metallic Gray (med-small)
-    Mud (starter default)
-        
-*/
-
 $breakpoint-small: 600px;
 $breakpoint-med-small: 700px;
 $breakpoint-med: 800px;
 $breakpoint-large: 1200px;
 
-// color variables... I attempted a bunch of things and could not get them to 
-// work. I found myself falling back into the nasty css traps from the two
-// previous classes.
-$color-scheme-small: (
-  $body-background-color: #CCC5B7,
-  $body-color: #FFFFFF,
-  $form-background-color: #E5BB89,
-  $form-color: #6F5D44,
-  $input-color: #CCC5B7
-);
-
-$color-scheme-small-alternate: (
-  $body-background-color: #E94823,
-  $body-color: #000000,
-  $form-background-color: #FFFFFF,
-  $form-color: #000000,
-  $input-color: #D8D8D8
-);
-
-$color-scheme-med-small: (
-  $body-background-color: #000000,
-  $body-color: #FFFFFF,
-  $form-background-color: #8A3F7F,
-  $form-color: #FFFFFF,
-  $input-color: #CACACA
-);
-
-@mixin screen($size, $type: max, $pixels: $breakpoint-small) {
-    @if $size == 'small' {
-        @media screen and (#{$type}-width: $breakpoint-small) {
-            @content;
-        }
+@mixin color-scheme($scheme) {
+    $form-background-color: map-get($scheme, $form-background-color);
+    $form-color: map-get($scheme, $form-color);
+    $input-color: map-get($scheme, $input-color);
+  
+    body {
+      background-color: $body-background-color;
+      color: $body-color;
     }
-    @else if $size == 'med-small' {
-        @media screen and (#{$type}-width: $breakpoint-med-small) {
-            @content;
-        }
-    }
-    @else if $size == 'med' {
-        @media screen and (#{$type}-width: $breakpoint-med) {
-            @content;
-        }
-    }
-    @else if $size == 'large' {
-        @media screen and (#{$type}-width: $breakpoint-large) {
-            @content;
-        }
-    }
-    @else {
-        @content;
+  
+    // Apply colors to your form and input elements
+    .form {
+      background-color: $form-background-color;
+      color: $form-color;
+  
+      input {
+        color: $input-color;
+      }
     }
 }
-
-@include screen('small') {
-    @include color-scheme($color-scheme-small);
-}
-
-@include screen('small') {
-    @include color-scheme($color-scheme-small-alternate);
-}
-
-@include screen('med-small') {
-    @include color-scheme($color-scheme-med-small);
-}
+  

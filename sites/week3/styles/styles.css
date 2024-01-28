@@ -1,57 +1,75 @@
-@media screen and (max-width: 600) {
-  body {
-    display: grid;
-    grid-template-columns: repeat(6, 100px);
-    grid-template-rows: auto;
-    background-color: #e27396;
-    color: black;
-  }
-  body form {
-    background-color: white;
-  }
-  body form fieldset {
-    color: #ea9ab2;
-  }
-  body form fieldset input {
-    background-color: lightgray;
-    color: #b3dee2;
-  }
-  body form fieldset textarea {
-    background-color: lightgray;
-    color: black;
-  }
-}
-body {
-  display: grid;
-  grid-template-columns: repeat(6, 100px);
-  grid-template-rows: auto;
-  background-color: darkred;
-  color: black;
-}
-body form {
-  background-color: white;
-}
-body form fieldset {
-  color: #f8ad9d;
-}
-body form fieldset input {
-  background-color: lightgray;
-  color: #ffdab9;
-}
-body form fieldset textarea {
-  background-color: #ffdab9;
-  color: black;
-}
-
 /*
-REFERENCES APA Style:
-    Justin Brazeau, Topal Developers (No Date), SASS Mixins Keep Your Stylesheets Dry
-        https://www.toptal.com/css/sass-mixins-keep-your-stylesheets-dry
-        Accessed: 25 January 2024 19:41:00    
-
-    Jennifer Gaskin, Venngage (November 30, 2022), 20+ Best Pastel Color Palettes for 2024    
-        https://venngage.com/blog/pastel-color-palettes/
-        Accessed: 27 January 2024 22:55:00
+    Paletton.com, Color Pallet designer
+        url: https://paletton.com/#uid=533180kllllaFw0g0qFqFg0w0aF
+        setting:
+            - (3) adjacent colors
+            - hue 195 degrees
+            - distribution 72 degrees
+            - base rgb: #277553
+        accessed on: 28 Janurary 2024
 */
+.responsive-form {
+  max-width: 100%;
+  margin: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.responsive-form input, .responsive-form textarea, .responsive-form button {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ababab;
+}
+.responsive-form textarea {
+  height: 100px;
+}
+.responsive-form button {
+  background-color: #499272;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.responsive-form button:hover {
+  background-color: #387057;
+}
+@media screen and (min-width: 600px) {
+  .responsive-form {
+    background-color: #277553;
+    color: #fff;
+  }
+  .responsive-form button {
+    background-color: #499272;
+  }
+  .responsive-form button:hover {
+    background-color: #387057;
+  }
+}
+@media screen and (min-width: 800px) {
+  .responsive-form {
+    background-color: #3E3175;
+    color: #fff;
+  }
+  .responsive-form button {
+    background-color: #5F5293;
+  }
+  .responsive-form button:hover {
+    background-color: #4a4072;
+  }
+}
+@media screen and (min-width: 900px) {
+  .responsive-form {
+    background-color: #A4A938;
+    color: #fff;
+  }
+  .responsive-form button {
+    background-color: #CFD369;
+  }
+  .responsive-form button:hover {
+    background-color: #c2c742;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,8 +1,12 @@
-// Define your breakpoints
 $breakpoint-small: 600px;
 $breakpoint-med-small: 700px;
 $breakpoint-med: 800px;
 $breakpoint-large: 1200px;
+$body-background-color: wheat;
+$body-color: rgb(54, 51, 51);
+$form-background-color: gold;
+$form-color: black;
+$input-color: lightgray;
 
 // Define the breakpoints, using @content as a placeholder for what I'll code below
 // this block.
@@ -37,8 +41,6 @@ $breakpoint-large: 1200px;
     }
 }
 
-// Ok, now to code a mixin where I'm stipulating the colors and such for small
-// screen sizes.
 @include screen('small') {
     body {
         display: grid;
@@ -48,6 +50,9 @@ $breakpoint-large: 1200px;
         color: $body-color;
 
         form {
+            display: grid;
+            grid-column: auto;
+            grid-row: auto;
             background-color: $form-background-color;
             fieldset {
                 color: $form-color;

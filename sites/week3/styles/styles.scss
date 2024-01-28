@@ -6,18 +6,11 @@ $form-color: black;
 $input-color: lightgray;
 $headlines-color : lightgray;
 
-/*
-REFERENCES APA Style:
-    Justin Brazeau, Topal Developers (No Date), SASS Mixins Keep Your Stylesheets Dry
-        https://www.toptal.com/css/sass-mixins-keep-your-stylesheets-dry
-        Accessed: 25 January 2024 19:41:00    
-*/
-
 // Define your breakpoints
-$breakpoint-small: 480px;
-$breakpoint-med-small: 768px;
-$breakpoint-med: 1024px;
-$breakpoint-large: 1200px;
+$breakpoint-small: 600;
+$breakpoint-med-small: 700px;
+$breakpoint-med: 800px;
+$breakpoint-large: 900px;
 
 // Define the breakpoints, using @content as a placeholder for what I'll code below
 // this block.
@@ -58,25 +51,91 @@ $breakpoint-large: 1200px;
     body {   
 
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: repeat(6, 100px);
         grid-template-rows: auto;
-        background-color: $body-background-color;
-        color: $body-color;
+        background-color: #e27396;
+        color: black;
 
         form {
             background-color: $form-background-color;
             fieldset {
-                color: $form-color;
+                color: #ea9ab2;
 
                 input {
                     background-color: $input-color;
-                    color: $form-color;
+                    color: #b3dee2;
                 }
                 textarea {
                     background-color: $input-color;
-                    color: $form-color;
+                    color: blackr;
                 }
             }
         }
     }
 } 
+
+@include screen('small') {
+    body {   
+
+        display: grid;
+        grid-template-columns: repeat(6, 100px);
+        grid-template-rows: auto;
+        background-color: #e27396;
+        color: black;
+
+        form {
+            background-color: $form-background-color;
+            fieldset {
+                color: #ea9ab2;
+
+                input {
+                    background-color: $input-color;
+                    color: #b3dee2;
+                }
+                textarea {
+                    background-color: $input-color;
+                    color: blackr;
+                }
+            }
+        }
+    }   
+}
+
+@include screen('medium') {
+    body {   
+
+        display: grid;
+        grid-template-columns: repeat(6, 100px);
+        grid-template-rows: auto;
+        background-color: #f08080;
+        color: black;
+
+        form {
+            background-color: $form-background-color;
+            fieldset {
+                color: #f8ad9d;
+
+                input {
+                    background-color: $input-color;
+                    color: #ffdab9;
+                }
+                textarea {
+                    background-color: #ffdab9;
+                    color: blackr;
+                }
+            }
+        }
+    }   
+}
+
+
+/*
+REFERENCES APA Style:
+    Justin Brazeau, Topal Developers (No Date), SASS Mixins Keep Your Stylesheets Dry
+        https://www.toptal.com/css/sass-mixins-keep-your-stylesheets-dry
+        Accessed: 25 January 2024 19:41:00    
+
+    Jennifer Gaskin, Venngage (November 30, 2022), 20+ Best Pastel Color Palettes for 2024    
+        https://venngage.com/blog/pastel-color-palettes/
+        Accessed: 27 January 2024 22:55:00
+*/

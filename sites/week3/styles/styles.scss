@@ -37,84 +37,84 @@ $responsive-medium: 800px;
 $responsive-large: 900px;
 
 $color-primary-small: (
-  background: $color-primary-0,
-  text: #fff,
-  button: $color-primary-2
+    background: $color-primary-0,
+    text: #fff,
+    button: $color-primary-2
 );
 
 $color-secondary-1-medium: (
-  background: $color-secondary-1-0,
-  text: #fff,
-  button: $color-secondary-1-2
+    background: $color-secondary-1-0,
+    text: #fff,
+    button: $color-secondary-1-2
 );
 
 $color-secondary-2-large: (
-  background: $color-secondary-2-0,
-  text: #fff,
-  button: $color-secondary-2-2
+    background: $color-secondary-2-0,
+    text: #fff,
+    button: $color-secondary-2-2
 );
 
 .responsive-form {
-  max-width: 100%;
-  margin: 20px;
-  padding: 20px;
-  box-sizing: border-box;
-
-  input, textarea, button {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 10px;
+    max-width: 100%;
+    margin: 20px;
+    padding: 20px;
     box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #ababab;
-  }
 
-  textarea {
-    height: 100px;
-  }
-
-  button {
-    background-color: map-get($color-primary-small, button);
-    color: map-get($color-primary-small, text);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: darken(map-get($color-primary-small, button), 10%);
+    input, textarea, button {
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #ababab;
     }
-  }
 
-  @media screen and (min-width: $responsive-small) {
-    background-color: map-get($color-primary-small, background);
-    color: map-get($color-primary-small, text);
+    textarea {
+      height: 100px;
+    }
+
     button {
       background-color: map-get($color-primary-small, button);
+      color: map-get($color-primary-small, text);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
       &:hover {
         background-color: darken(map-get($color-primary-small, button), 10%);
       }
     }
-  }
 
-  @media screen and (min-width: $responsive-medium) {
-    background-color: map-get($color-secondary-1-medium, background);
-    color: map-get($color-secondary-1-medium, text);
-    button {
-      background-color: map-get($color-secondary-1-medium, button);
-      &:hover {
-        background-color: darken(map-get($color-secondary-1-medium, button), 10%);
-      }
+    @media screen and (min-width: $responsive-small) {
+        background-color: map-get($color-primary-small, background);
+        color: map-get($color-primary-small, text);
+        button {
+            background-color: map-get($color-primary-small, button);
+            &:hover {
+              background-color: darken(map-get($color-primary-small, button), 10%);
+            }
+        }
     }
-  }
 
-  @media screen and (min-width: $responsive-large) {
-    background-color: map-get($color-secondary-2-large, background);
-    color: map-get($color-secondary-2-large, text);
-    button {
-      background-color: map-get($color-secondary-2-large, button);
-      &:hover {
-        background-color: darken(map-get($color-secondary-2-large, button), 10%);
-      }
+    @media screen and (min-width: $responsive-medium) {
+        background-color: map-get($color-secondary-1-medium, background);
+        color: map-get($color-secondary-1-medium, text);
+        button {
+            background-color: map-get($color-secondary-1-medium, button);
+            &:hover {
+              background-color: darken(map-get($color-secondary-1-medium, button), 10%);
+            }
+        }
     }
-  }
+
+    @media screen and (min-width: $responsive-large) {
+        background-color: map-get($color-secondary-2-large, background);
+        color: map-get($color-secondary-2-large, text);
+        button {
+            background-color: map-get($color-secondary-2-large, button);
+            &:hover {
+            background-color: darken(map-get($color-secondary-2-large, button), 10%);
+            }
+        }
+    }
 }

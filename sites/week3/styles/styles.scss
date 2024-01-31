@@ -53,6 +53,34 @@ $color-secondary-2-large: (
     button: $color-secondary-2-2
 );
 
+/*
+    mixin example:
+        regex from W3C HTML5
+        https://html.spec.whatwg.org/multipage/input.html#valid-e-mail-address
+        accessed on: 28 Janurary 2024
+
+    
+
+*/
+@mixin validate-email($email) {
+    @if not regex($email, '^[a-zA-Z0-9.!#$%&\'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$')
+        {
+            @warn 'Invalid email address';
+            border: 2px solid red;
+        }
+}
+
+.validate-email-input {
+    @include validate-email(email);
+
+    &:invalid-email {
+        border: 2px solid red;
+    }
+    &:valid-email {
+        border: 2px solid green;
+    }
+}
+
 .responsive-form {
     max-width: 100%;
     margin: 20px;

@@ -109,15 +109,13 @@ $color-secondary-2-large: (
     }
 
     @media screen and (min-width: $responsive-large) {
-        @mixin respnsive-form-large {
-            background-color: map-get($color-secondary-2-large, background);
-            color: map-get($color-secondary-2-large, text);
-            button {
-                background-color: map-get($color-secondary-2-large, button);
+        background-color: map-get($color-secondary-2-large, background);
+        color: map-get($color-secondary-2-large, text);
+        button {
+            background-color: map-get($color-secondary-2-large, button);
                 &:hover {
                     background-color: darken(map-get($color-secondary-2-large, button), 10%);
                 }
-            }
         }
     }
 }

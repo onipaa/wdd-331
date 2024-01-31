@@ -7,15 +7,6 @@
             - distribution 72 degrees
             - base rgb: #277553
         accessed on: 28 Janurary 2024
-
-    SASS Coaching, ChatGPT
-        url: https://chat.openai.com/
-            - This was for learning purposes only (after I had tried to do it
-            - myself). I'm seeing better patterns with this. Basically, the
-            - @name (parameters) { stuff } act like JS functions. The color
-            - schemes look/act like what I would call a dictionary in Python.
-            - adding more key/value pairs would enable even more customization.
-        accessed on: 28 Janurary 2024
 */
 
 // these colors "know" each other and can be used together
@@ -76,10 +67,12 @@ $color-secondary-2-large: (
         border: 1px solid #ccc;
         border-radius: 10px;
         box-shadow: 0 0 10px #ababab;
+        font-size: 125%;
     }
 
     textarea {
       height: 100px;
+      font-size: 125%;
     }
 
     button {

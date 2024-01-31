@@ -63,9 +63,6 @@ $color-secondary-2-large: (
         examples from google
             https://blog.nonstopio.com/form-validation-with-mixins-in-flutter-e9a425bca5d1
             https://www.sitepoint.com/validating-input-in-sass-mixins-and-functions/
-
-        I could do a lot of stuff but I do not have time to fiddle with this enough.
-
         Accessed Multiple Dates:
             26-30 January 2024
 
@@ -75,7 +72,7 @@ $color-secondary-2-large: (
     @if not regex($email, '^[a-zA-Z0-9.!#$%&\'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$')
         {
             @warn 'Invalid email address';
-            border: 2px solid red;
+            border: 4px solid red;
         }
 }
 
@@ -83,10 +80,10 @@ $color-secondary-2-large: (
     @include validate-email(email);
 
     &:invalid-email {
-        border: 2px solid red;
+        border: 4px solid red;
     }
     &:valid-email {
-        border: 2px solid green;
+        border: 4px solid green;
     }
 }
 

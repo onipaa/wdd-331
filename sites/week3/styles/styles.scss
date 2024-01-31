@@ -59,9 +59,18 @@ $color-secondary-2-large: (
         https://html.spec.whatwg.org/multipage/input.html#valid-e-mail-address
         accessed on: 28 Janurary 2024
 
-    
+    mixin other sources:
+        examples from google
+            https://blog.nonstopio.com/form-validation-with-mixins-in-flutter-e9a425bca5d1
+            https://www.sitepoint.com/validating-input-in-sass-mixins-and-functions/
+
+        I could do a lot of stuff but I do not have time to fiddle with this enough.
+
+        Accessed Multiple Dates:
+            26-30 January 2024
 
 */
+
 @mixin validate-email($email) {
     @if not regex($email, '^[a-zA-Z0-9.!#$%&\'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$')
         {

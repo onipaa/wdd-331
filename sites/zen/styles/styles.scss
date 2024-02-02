@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 /*
     Color Pallete: 
     --------------------------------------------------
@@ -15,6 +16,10 @@ $color_5: #9685BA;
 $color_6: #988F5E;
 $color_7: #B3AE94;
 
+$font_1: 'Berkshire+Swash', serif;
+$font_2: 'Open+Sans', sans-serif;
+
+
 /* css Zen Garden default style v1.02 */
 /* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
 /* This file based on 'Tranquille' by Dave Shea */
@@ -30,7 +35,7 @@ html {
 }
 
 body {
-	font: 75% georgia, sans-serif;
+	font: 75% $font_2;
 	line-height: 1.88889;
 	color: $color_1;
 	background: #fff url(http://csszengarden.com/001/blossoms.jpg) no-repeat bottom right;
@@ -44,7 +49,7 @@ p {
 }
 
 h3 {
-	font: italic normal 1.4em georgia, sans-serif;
+	font: italic normal 1.4em $font_2;
 	letter-spacing: 1px;
 	margin-bottom: 0;
 	color: $color_2;
@@ -124,7 +129,7 @@ header {
 	width: 160px;
 	float: left;
 	p {
-		font: italic 1.1em/2.2 georgia;
+		font: italic 1.1em/2.2 $font_2;
 		text-align: center;
 	}
 }
@@ -157,7 +162,7 @@ footer {
 	top: 0;
 	right: 0;
 	.wrapper {
-		font: 10px verdana, sans-serif;
+		font: 10px $font_1;
 		background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y;
 		padding: 10px;
 		margin-top: 150px;

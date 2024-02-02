@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap");
 /*
     Color Pallete: 
     --------------------------------------------------
@@ -20,7 +21,7 @@ html {
 }
 
 body {
-  font: 75% georgia, sans-serif;
+  font: 75% "Open+Sans", sans-serif;
   line-height: 1.88889;
   color: #555753;
   background: #fff url(http://csszengarden.com/001/blossoms.jpg) no-repeat bottom right;
@@ -34,7 +35,7 @@ p {
 }
 
 h3 {
-  font: italic normal 1.4em georgia, sans-serif;
+  font: italic normal 1.4em "Open+Sans", sans-serif;
   letter-spacing: 1px;
   margin-bottom: 0;
   color: #7D775C;
@@ -113,7 +114,7 @@ header h2 {
   float: left;
 }
 .summary p {
-  font: italic 1.1em/2.2 georgia;
+  font: italic 1.1em/2.2 "Open+Sans", sans-serif;
   text-align: center;
 }
 
@@ -144,7 +145,7 @@ footer a:visited {
   right: 0;
 }
 .sidebar .wrapper {
-  font: 10px verdana, sans-serif;
+  font: 10px "Berkshire+Swash", serif;
   background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y;
   padding: 10px;
   margin-top: 150px;

@@ -1,13 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 /*
-    Color Pallete: 
-    --------------------------------------------------
-        https://coolors.co/
-        https://coolors.co/e4f1e4-97c4ae-55828b-2d4a4d-1f2a33
-        Accessed 1 Feb 2024
-    --------------------------------------------------
-*/
+Color Pallete: 
+    Coolors
+    https://coolors.co/
+    https://coolors.co/e4f1e4-97c4ae-55828b-2d4a4d-1f2a33
+    Accessed 1 February 2024
 
+Fonts:
+    Google Fonts
+    https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap
+    Accessed 1 Feburary 2024
+
+HTML:
+
+CSS:
+    css Zen Garden default style v1.02
+    css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/
+    This file based on 'Tranquille' by Dave Shea
+    You may use this file as a foundation for any new work, but you may find it
+    easier to start from scratch. Not all elements are defined in this file, so
+    you'll most likely want to refer to the xhtml as well. Your images should be
+    linked as if the CSS file sits in the same folder as the images. ie. no paths.
+
+Images:
+	Image by rawpixel.com, Freepik
+	https://www.freepik.com/free-vector/blooming-white-flowers_4557540.htm#query=spring&position=9&from_view=keyword&track=sph&uuid=2c9db58c-c547-4e5c-acf1-6553994eb97b"
+	Accessed: 3 February 2024
+*/
+-- -------------------------------------------------------------------------- --
+-- colors
+-- -------------------------------------------------------------------------- --
 $color_1: #555753;
 $color_2: #7D775C;
 $color_3: #B7A5DF;
@@ -15,20 +37,18 @@ $color_4: #D4CDDC;
 $color_5: #9685BA;
 $color_6: #988F5E;
 $color_7: #B3AE94;
-
+-- -------------------------------------------------------------------------- --
+-- fonts
+-- -------------------------------------------------------------------------- --
 $font_1: 'Berkshire Swash', serif;
 $font_2: 'Open Sans', sans-serif;
-
-
-/* css Zen Garden default style v1.02 */
-/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
-/* This file based on 'Tranquille' by Dave Shea */
-/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
-/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
-/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
-/* basic elements */
-/* specific divs */
-
+-- -------------------------------------------------------------------------- --
+-- breakpoints
+-- -------------------------------------------------------------------------- --
+$breakpoint_small: 600px;
+$breakpoint_medium: 800px;
+$breakpoint_large: 1000px;
+-- -------------------------------------------------------------------------- --
 html {
 	margin: 0;
 	padding: 0;

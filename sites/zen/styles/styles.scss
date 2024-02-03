@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
 /*
 Color Pallete: 
     Coolors
@@ -24,31 +25,35 @@ CSS:
 
 Images:
 	Image by rawpixel.com, Freepik
-	https://www.freepik.com/free-vector/blooming-white-flowers_4557540.htm#query=spring&position=9&from_view=keyword&track=sph&uuid=2c9db58c-c547-4e5c-acf1-6553994eb97b"
 	Accessed: 3 February 2024
+
+	We are revamping the images to match the "fantasy" like font Berkshire
+	Swash. Michaela will find some nice images. I think we will also replace
+	the squiggly circles at the bottom with those nice images. We can overlay
+	the images with a partial shaded circle so that the text pops.
+
+	We will reference the images here.
 */
--- -------------------------------------------------------------------------- --
--- colors
--- -------------------------------------------------------------------------- --
-$color_1: #555753;
-$color_2: #7D775C;
-$color_3: #B7A5DF;
-$color_4: #D4CDDC;
-$color_5: #9685BA;
-$color_6: #988F5E;
-$color_7: #B3AE94;
--- -------------------------------------------------------------------------- --
--- fonts
--- -------------------------------------------------------------------------- --
+
+/* ************************************************************************** */
+/* colors */
+$color_1: #E4F1E4;
+$color_2: #97C4AE;
+$color_3: #55828B;
+$color_4: #2D4A4D;
+$color_5: #1F2A33;
+$color_6: white;
+$color_7: black;
+
+/* fonts */
 $font_1: 'Berkshire Swash', serif;
 $font_2: 'Open Sans', sans-serif;
--- -------------------------------------------------------------------------- --
--- breakpoints
--- -------------------------------------------------------------------------- --
+
+/* break points */
 $breakpoint_small: 600px;
 $breakpoint_medium: 800px;
 $breakpoint_large: 1000px;
--- -------------------------------------------------------------------------- --
+/* ************************************************************************** */
 html {
 	margin: 0;
 	padding: 0;

@@ -42,8 +42,10 @@ most of the time, simple greps get me to the files I need.
 
 allow pasting
 
-var emailElement = document.getElementById('email);
+var emailElement = document.getElementById('email');
 emailElement.value = 'hello';
 emailElement.value = 'me@';
 emailElement.value = 'me@me.';
 emailElement.value = 'me@me.com';
+
+document.getElementById('email').click();

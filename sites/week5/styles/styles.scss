@@ -88,7 +88,7 @@ Column Grid:
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between; /* Align cards with equal spacing */
+    justify-content: space-evenly; /* Align cards with equal spacing */
     margin: 0 auto;
     max-height: 1000px;
 

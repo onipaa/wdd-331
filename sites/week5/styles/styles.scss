@@ -1,7 +1,9 @@
 /*
+********************************************************************************
 Random color palette from Coolors
     url: https://coolors.co/palettes/popular
     accessed: 6 February 2024
+********************************************************************************
 */
 /* SCSS HEX */
 $rich-black: #01161E;
@@ -14,9 +16,10 @@ html, body {
     margin: 0 auto;
 }
   
+/* trying to get the background color to span the whole distance */
 body .card-grid {
     max-width: 1000px;
-    max-height: 2000px;
+    max-height: 2500px;
     background-color: $beige;
 }
 
@@ -51,10 +54,12 @@ body .card-grid {
 }  
   
 /*
+********************************************************************************
 Row Grid:
   Add space between cards in row-grid
   - I didn't like just spacing one side
   - I played with various spacing but liked the plain margin best
+********************************************************************************
 */
 
 .row-grid {
@@ -71,10 +76,12 @@ Row Grid:
   
 
 /*
+********************************************************************************
 Column Grid:
     Added space between cards
     - centered the cards horizontally
     - plain margin (not top)
+********************************************************************************
 */
   .col-grid {
     align-content: center;

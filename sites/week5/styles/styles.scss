@@ -69,8 +69,6 @@ Row Grid:
 }
   
 
-
-
 /* Column grid layout */
   .col-grid {
     align-content: center;
@@ -80,9 +78,8 @@ Row Grid:
     justify-content: space-between; /* Align cards with equal spacing */
     margin: 0 auto;
     max-height: 1000px;
-  }
-  
-  .col-grid .card {
-    margin-top: 10px;
-  }
-  
+
+    .card {
+        margin: 10px;
+    }
+  }  

@@ -81,9 +81,10 @@ Column Grid:
     Added space between cards
     - centered the cards horizontally
     - plain margin (not top)
+    - switched to space-evenly for better look
 ********************************************************************************
 */
-  .col-grid {
+.col-grid {
     align-content: center;
     display: flex;
     flex-direction: column;
@@ -91,8 +92,8 @@ Column Grid:
     justify-content: space-evenly; /* Align cards with equal spacing */
     margin: 0 auto;
     max-height: 1000px;
-
+    
     .card {
         margin: 10px;
     }
-  }  
+}

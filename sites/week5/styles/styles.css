@@ -68,6 +68,7 @@ Column Grid:
     Added space between cards
     - centered the cards horizontally
     - plain margin (not top)
+    - switched to space-evenly for better look
 ********************************************************************************
 */
 .col-grid {

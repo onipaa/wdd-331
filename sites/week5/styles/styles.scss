@@ -15,8 +15,8 @@ html, body {
 }
   
 body .card-grid {
-    max-width: 1200px;
-    max-height: 1200px;
+    max-width: 1000px;
+    max-height: 2000px;
     background-color: $beige;
 }
 
@@ -61,7 +61,7 @@ Row Grid:
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly; /* Align cards with equal spacing */
-    max-width: 1200 px;
+    max-width: 1000 px;
 
     .card {
         margin: 10px;

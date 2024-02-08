@@ -62,6 +62,7 @@ Row Grid:
     flex-wrap: wrap;
     justify-content: space-evenly; /* Align cards with equal spacing */
     max-width: 1000 px;
+    max-height: 1000 px;
 
     .card {
         margin: 10px;
@@ -69,7 +70,12 @@ Row Grid:
 }
   
 
-/* Column grid layout */
+/*
+Column Grid:
+    Added space between cards
+    - centered the cards horizontally
+    - plain margin (not top)
+*/
   .col-grid {
     align-content: center;
     display: flex;

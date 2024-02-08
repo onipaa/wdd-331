@@ -1,0 +1,71 @@
+/*
+Random color palette from Coolors
+    url: https://coolors.co/palettes/popular
+    accessed: 6 February 2024
+*/
+/* SCSS HEX */
+html, body {
+  margin: 0 auto;
+}
+
+body .card-grid {
+  max-width: 1200px;
+  max-height: 1200px;
+  background-color: #EFF6E0;
+}
+
+.card-grid .card {
+  border-radius: 20px;
+  border: 2px solid #01161E;
+  margin-bottom: 20px; /* Adjust margin as needed */
+  /* max-width: calc(20% - 10px); ok, complex... at max, the .card can be 20% of the container less 10px */
+  overflow: hidden; /* crop the image to the size of the card */
+  position: relative; /* Positioning context for absolute positioning of h2 */
+}
+.card-grid .card img {
+  max-width: fit-content; /* Ensure image fits within card width */
+}
+.card-grid .card h2 {
+  background-color: rgba(18, 69, 89, 0.5); /* Semi-transparent background for better readability */
+  bottom: 0;
+  box-shadow: black;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 100%;
+  left: 0;
+  margin: 0;
+  padding: 10px; /* Adjust padding as needed */
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+/* Row grid layout */
+.row-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /* Align cards with equal spacing */
+  max-width: 1200 px;
+}
+
+/* Add space between cards in row-grid */
+.row-grid .card {
+  margin: 10px; /* Adjust spacing between cards */
+}
+
+/* Column grid layout */
+.col-grid {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Align cards with equal spacing */
+  margin: 0 auto;
+  max-height: 1000px;
+}
+
+.col-grid .card {
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=styles.css.map */

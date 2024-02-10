@@ -11,6 +11,11 @@ $midnight-green: #124559;
 $air-force-blue: #598392;
 $ash-gray: #AEC3B0;
 $beige: #EFF6E0;
+$steel-blue: rgb(71, 131, 194);
+$moonstone: #5EA4B1ff;
+$pale-dogwood: #D7C1B3ff;
+$rose-taupe: #805557ff;
+$licorice: #211811ff;
 
 html, body {
     margin: 0 auto;
@@ -20,15 +25,13 @@ html, body {
 body .card-grid {
     max-width: 1000px;
     max-height: 2500px;
-    background-color: $beige;
+    background-color: $pale-dogwood;
 }
-
 
 .card-grid .card {
     border-radius: 20px;
-    border: 2px solid $rich-black;
+    border: 2px $licorice;
     margin-bottom: 20px; /* Adjust margin as needed */
-    /* max-width: calc(20% - 10px); ok, complex... at max, the .card can be 20% of the container less 10px */
     overflow: hidden; /* crop the image to the size of the card */
     position: relative; /* Positioning context for absolute positioning of h2 */
 
@@ -37,9 +40,8 @@ body .card-grid {
     }
 
     h2 {
-        background-color: rgba(18, 69, 89, 0.5); /* Semi-transparent background for better readability */
+        background-color: rgba(71, 131, 194, 0.50); /* Semi-transparent background for better readability */
         bottom: 0;
-        box-shadow: black;
         color: white;
         font-family: 'Courier New', Courier, monospace;
         font-size: 100%;
@@ -48,6 +50,7 @@ body .card-grid {
         padding: 10px; /* Adjust padding as needed */
         position: absolute;
         text-align: center;
+        text-shadow: 1px 1px $licorice;
         width: 100%;
     }
 
@@ -74,7 +77,6 @@ Row Grid:
     }
 }
   
-
 /*
 ********************************************************************************
 Column Grid:
@@ -92,6 +94,7 @@ Column Grid:
     justify-content: space-evenly; /* Align cards with equal spacing */
     margin: 0 auto;
     max-height: 1000px;
+    max-width: 1000px;
     
     .card {
         margin: 10px;

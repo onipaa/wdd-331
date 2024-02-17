@@ -1,0 +1,118 @@
+/*
+********************************************************************************
+B - elements (header, container, menu, checkbox, input)
+E - entities (menu item, list item, checkbox, caption, header title)
+M - modifier (disabled, highlighted, checked, fixed, size big, color yellow)
+
+
+tab       - 4 spaces consistently and easier to spot
+nesting   - no more than 3 or 4 levels (and should make sense)
+functions - should be simple for easy maintainability
+
+BEM (Block Element Modifier) is a popular naming convention for writing CSS and
+HTML that aims to create more modular and reusable code. It helps developers 
+create well-structured and maintainable front-end codebases by providing a clear
+and consistent way to name classes.
+
+Here's how BEM works:
+Block: A standalone component or module that is semantically meaningful on its
+own. Blocks are named in a way that describes their purpose or function.
+
+Element: Parts of a block that have no standalone meaning and are semantically
+tied to the block. Elements are named as a combination of the block name and 
+the element name, separated by a double underscore (__).
+
+Modifier: Flags on blocks or elements that alter their appearance, behavior, or
+state. Modifiers are named as a combination of the block or element name and 
+the modifier name, separated by a double hyphen (--).
+
+<div class="button button--large button--primary">
+    <span class="button__text">Click me</span>
+</div>
+
+In this example:
+
+.button: This is the block. It represents a standalone component, in this case,
+a button.
+
+.button--large: This is a modifier applied to the button block, indicating that
+it's a large-sized button.
+
+.button--primary: Another modifier applied to the button block, indicating that
+it's styled as a primary button.
+
+.button__text: This is an element of the button block. It represents the text
+inside the button.
+
+With BEM, the CSS corresponding to this HTML might look like:
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button--large {
+    padding: 15px 30px;
+    font-size: 20px;
+}
+
+.button--primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.button__text {
+    font-weight: bold;
+}
+********************************************************************************
+*/
+
+@import url();
+
+
+$primary-color: #007bff;
+$secondary-color: #28a745;
+
+header {
+  background-color: $primary-color;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-counter {
+  background-color: $secondary-color;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+}
+
+.cart {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.total {
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer {
+  background-color: $primary-color;
+  color: white;
+  padding: 20px;
+}

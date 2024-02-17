@@ -1,0 +1,25 @@
+{
+    "items": [
+      {
+        "name": "iPhone 15 Pro Titanium",
+        "color": "Blue Titanium",
+        "size_screen": "6.7 Inch Display",
+        "size_storage": "1 TB",
+        "quantity": 2,
+        "price": 1599.99
+      },
+      {
+        "name": "AppleTV",
+        "quantity": 1,
+        "price": 129.00
+      },
+      {
+        "name": "MacStudio",
+        "quantity": 1,
+        "other_price": "Three arms, two legs, and firstborn son",
+        "price": 4000.00
+      }
+    ],
+    "promoCode": "SAVE10",
+    "discount": 10
+  }

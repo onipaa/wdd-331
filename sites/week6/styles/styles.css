@@ -70,163 +70,142 @@ With BEM, the CSS corresponding to this HTML might look like:
 }
 ********************************************************************************
 */
-
 /* SCSS HEX */
-$isabelline: #edede9ff;
-$timberwolf: #d6ccc2ff;
-$linen: #f5ebe0ff;
-$champagne-pink: #e3d5caff;
-$pale-dogwood: #d5bdafff;
-$lion: #BD9F8Dff;
-
 body {
-    background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 400px;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 400px;
 }
 
 header {
-    align-items: baseline;
-    background-color: $isabelline;
-    color: $lion;
-    display: flex;
-    height: 75px;
-    justify-content: space-between;
-    padding-bottom: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 10px;
-
-    h1 {
-        font-size: 1.75em;
-    }
+  align-items: baseline;
+  background-color: #edede9;
+  color: #bd9f8d;
+  display: flex;
+  height: 75px;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+}
+header h1 {
+  font-size: 1.75em;
 }
 
 .cart-counter {
-    background-color: $lion;
-    border-radius: 15px;
-    color: $isabelline;
-    font-size: large;
-    font-weight: bolder;
-    height: 25px;
-    padding: 5px 15px;
-    text-align: center;
-    vertical-align: middle;
-    width: 25px;
+  background-color: #bd9f8d;
+  border-radius: 15px;
+  color: #edede9;
+  font-size: large;
+  font-weight: bolder;
+  height: 25px;
+  padding: 5px 15px;
+  text-align: center;
+  vertical-align: middle;
+  width: 25px;
 }
 
 .cart {
-    background-color: $isabelline;
-    padding: 20px;
-/*    grid-template-columns: repeat(2, 200px); */
+  background-color: #edede9;
+  padding: 20px;
+  /*    grid-template-columns: repeat(2, 200px); */
 }
 
 /* I need to make this dynamic... using three cart-item-first/second/third is kinda wonky */
-
 .cart-item {
-    background-color: white;
-    border-radius: 10px;
-    border: 1px solid $lion;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-bottom: 10px;
-    padding: 10px;
-
-    .cart-item__info {
-        color: $lion;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-        max-width: 175px;
-        padding: 5px;
-        text-align: left;
-
-        h3 {
-            margin: 5px;
-        }
-
-        p {
-            margin: 5px;
-        }
-    }
-
-    .cart-item__amount {
-        color: white;
-        display: flex;
-        flex-grow: 1;
-        max-width: 175px;
-        min-width: 175px;
-        text-align: center;
-    }
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #bd9f8d;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.cart-item .cart-item__info {
+  color: #bd9f8d;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 175px;
+  padding: 5px;
+  text-align: left;
+}
+.cart-item .cart-item__info h3 {
+  margin: 5px;
+}
+.cart-item .cart-item__info p {
+  margin: 5px;
+}
+.cart-item .cart-item__amount {
+  color: white;
+  display: flex;
+  flex-grow: 1;
+  max-width: 175px;
+  min-width: 175px;
+  text-align: center;
 }
 
 .promo-code {
-  background-color: $timberwolf;
+  background-color: #d6ccc2;
   border-radius: 10px;
-  border: 1px solid $lion;
+  border: 1px solid #bd9f8d;
   color: green;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin-bottom: 10px;
   padding: 10px;
-
-    .promo-code__info {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-        max-width: 175px;
-        padding: 5px;
-        text-align: left;
-
-        h3 {
-            margin: 5px;
-        }
-
-        p {
-            margin: 5px;
-        }
-    }
-
-
+}
+.promo-code .promo-code__info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 175px;
+  padding: 5px;
+  text-align: left;
+}
+.promo-code .promo-code__info h3 {
+  margin: 5px;
+}
+.promo-code .promo-code__info p {
+  margin: 5px;
 }
 
-
 .total {
-    background-color: white;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-bottom: 10px;
-    padding: 10px;
-
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  padding: 10px;
 }
 
 .redeem-input {
-    background-color: white;
-    border-radius: 10px;
-    border: 1px solid $lion;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-bottom: 10px;
-    padding: 10px;
-
-    .redeem-input__info {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-        max-width: 175px;
-        padding: 5px;
-        text-align: left;
-    }
-
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #bd9f8d;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.redeem-input .redeem-input__info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 175px;
+  padding: 5px;
+  text-align: left;
 }
 
 footer {
-    background-color: $lion;
-    color: white;
-    padding: 20px;
+  background-color: #bd9f8d;
+  color: white;
+  padding: 20px;
 }
+
+/*# sourceMappingURL=styles.css.map */

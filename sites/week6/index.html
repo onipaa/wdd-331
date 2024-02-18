@@ -3,19 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width= , initial-scale=1.0">
-    <title>Document</title>
+    <title>Week6Schtuff</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header>
-        <h1>Shopping Cart</h1>
-        <div class="cart-counter">0</div>
+        <h1>Your Cart</h1>
+        <div class="cart-counter">3</div>
     </header>
     <main class="cart">
-        <!-- Cart items will be dynamically populated here -->
+        <!-- Cart items will be dynamically populated here, but for now, I'll just make em -->
+        <div class="cart-item">
+            <div class="cart-item__info">
+                <h3>First Product Name</h3>
+                <p>Brief Description</p>
+            </div>
+            <div id="cart-item__amount">$12</div>
+        </div>
+        
+        <div class="cart-item">
+            <div class="cart-item__info">
+                <h3>Second Product Name</h3>
+                <p>Brief Description</p>
+            </div>
+            <div id="cart-item__amount">$8</div>
+        </div>
+
+        <div class="cart-item">
+            <div class="cart-item__info">
+                <h3>Third Product Name</h3>
+                <p>Brief Description</p>
+            </div>
+            <div id="cart-item__amount">$5</div>
+        </div>
+
+        <div class="promo-code">
+            <div class="promo-code__info">
+                <h3>Promo Code</h3>
+                <p>EXAMPLECODE</p>
+            </div>
+            <div id="promo-code__amount">-$5</div>
+        </div>
+
+        <div class="total">Total (USD) $<span>20.00</span></div><br>
+
+        <div class="redeem-input">
+            <input id="promo-code__input" placeholder="SAVE10" size="35">
+            <button>Redeem</button><br>
+        </div>
     </main>
     <footer>
-        <div class="total">Total: $<span>0.00</span></div>
+        <!-- something here that is for the typical foot -->
     </footer>
-    <script src="app.js"></script>
+    <script src="cart.js"></script>
 </body>
 </html>

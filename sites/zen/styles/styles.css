@@ -1,209 +1,169 @@
+/*
+********************************************************************************
+B - elements (header, container, menu, checkbox, input)
+E - entities (menu item, list item, checkbox, caption, header title)
+M - modifier (disabled, highlighted, checked, fixed, size big, color yellow)
+
+
+tab       - 4 spaces consistently and easier to spot
+nesting   - no more than 3 or 4 levels (and should make sense)
+functions - should be simple for easy maintainability
+
+BEM (Block Element Modifier) is a popular naming convention for writing CSS and
+HTML that aims to create more modular and reusable code. It helps developers 
+create well-structured and maintainable front-end codebases by providing a clear
+and consistent way to name classes.
+
+Here's how BEM works:
+Block: A standalone component or module that is semantically meaningful on its
+own. Blocks are named in a way that describes their purpose or function.
+
+Element: Parts of a block that have no standalone meaning and are semantically
+tied to the block. Elements are named as a combination of the block name and 
+the element name, separated by a double underscore (__).
+
+Modifier: Flags on blocks or elements that alter their appearance, behavior, or
+state. Modifiers are named as a combination of the block or element name and 
+the modifier name, separated by a double hyphen (--).
+
+<div class="button button--large button--primary">
+    <span class="button__text">Click me</span>
+</div>
+
+In this example:
+
+.button: This is the block. It represents a standalone component, in this case,
+a button.
+
+.button--large: This is a modifier applied to the button block, indicating that
+it's a large-sized button.
+
+.button--primary: Another modifier applied to the button block, indicating that
+it's styled as a primary button.
+
+.button__text: This is an element of the button block. It represents the text
+inside the button.
+
+With BEM, the CSS corresponding to this HTML might look like:
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button--large {
+    padding: 15px 30px;
+    font-size: 20px;
+}
+
+.button--primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.button__text {
+    font-weight: bold;
+}
+
+ATTRIBUTION:
+    Hero Header Image:
+        <a href="https://www.freepik.com/free-photo/underwater-nature-fish-coral-seaweed-starfish-generated-by-ai_41218698.htm#query=fantasy&position=29&from_view=keyword&track=sph&uuid=ffb8d54d-75fa-44e3-b6e7-4f3b38eb3f4b">Image by vecstock</a> on Freepik
+        accessed on: 29 Feb 2024 7:13 PM
+********************************************************************************
+*/
+/*
+********************************************************************************
+globals
+********************************************************************************
+*/
 @import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap");
 /*
-    Color Pallete: 
-    --------------------------------------------------
-        https://coolors.co/
-        https://coolors.co/e4f1e4-97c4ae-55828b-2d4a4d-1f2a33
-        Accessed 1 Feb 2024
-    --------------------------------------------------
+********************************************************************************
+globals
+********************************************************************************
 */
-/* css Zen Garden default style v1.02 */
-/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
-/* This file based on 'Tranquille' by Dave Shea */
-/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
-/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
-/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
-/* basic elements */
-/* specific divs */
-html {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font: 75% "Open Sans", sans-serif;
-  line-height: 1.88889;
-  color: #555753;
-  background: #fff url(http://csszengarden.com/001/blossoms.jpg) no-repeat bottom right;
-  margin: 0;
-  padding: 0;
-}
-
-p {
-  margin-top: 0;
-  text-align: justify;
-}
-
-h3 {
-  font: italic normal 1.4em "Berkshire Swash", serif;
-  letter-spacing: 1px;
-  margin-bottom: 0;
-  color: #7D775C;
-}
-
-a:link {
-  font-weight: bold;
-  text-decoration: none;
-  color: #B7A5DF;
-}
-a:visited {
-  font-weight: bold;
-  text-decoration: none;
-  color: #D4CDDC;
-}
-a:hover {
-  text-decoration: underline;
-  color: #9685BA;
-}
-a:focus {
-  text-decoration: underline;
-  color: #9685BA;
-}
-a:active {
-  text-decoration: underline;
-  color: #9685BA;
-}
-
-abbr {
-  border-bottom: none;
-}
-
+/* Page Wrapper */
 .page-wrapper {
-  background: url(http://csszengarden.com/001/zen-bg.jpg) no-repeat top left;
-  padding: 0 175px 0 110px;
-  margin: 0;
-  position: relative;
+  background-color: #E4F1E4;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
-.intro {
-  min-width: 470px;
-  width: 100%;
+/* Headings */
+h1 {
+  font-size: 3rem;
+  font-family: "Berkshire Swash", serif;
 }
 
-header {
-  padding-top: 20px;
-  height: 87px;
-}
-header h1 {
-  background: transparent url(http://csszengarden.com/001/h1.gif) no-repeat top left;
-  margin-top: 10px;
-  display: block;
-  width: 219px;
-  height: 87px;
-  float: left;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-header h2 {
-  background: transparent url(http://csszengarden.com/001/h2.gif) no-repeat top left;
-  margin-top: 58px;
-  margin-bottom: 40px;
-  width: 200px;
-  height: 18px;
-  float: right;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.summary {
-  clear: both;
-  margin: 20px 20px 20px 10px;
-  width: 160px;
-  float: left;
-}
-.summary p {
-  font: italic 1.1em/2.2 "Open Sans", sans-serif;
-  text-align: center;
-}
-
-.preamble {
-  clear: right;
-  padding: 0px 10px 0 10px;
-}
-
-.supporting {
-  padding-left: 10px;
-  margin-bottom: 40px;
-}
-
-footer {
-  text-align: center;
-}
-footer a:link {
-  margin-right: 20px;
-}
-footer a:visited {
-  margin-right: 20px;
-}
-
-.sidebar {
-  margin-left: 600px;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.sidebar .wrapper {
-  font: 10px "Berkshire Swash", serif;
-  background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y;
-  padding: 10px;
-  margin-top: 150px;
-  width: 130px;
-}
-.sidebar h3.select {
-  background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left;
-  margin: 10px 0 5px 0;
-  width: 97px;
-  height: 16px;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.sidebar h3.archives {
-  background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left;
-  margin: 25px 0 5px 0;
-  width: 57px;
-  height: 14px;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.sidebar h3.resources {
-  background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left;
-  margin: 25px 0 5px 0;
-  width: 63px;
-  height: 10px;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.sidebar ul {
-  margin: 0;
-  padding: 0;
-}
-.sidebar li {
-  line-height: 1.3em;
-  background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center;
-  display: block;
-  padding-top: 5px;
-  margin-bottom: 5px;
-  list-style-type: none;
-}
-.sidebar li a:link {
-  color: #988F5E;
-}
-.sidebar li a:visited {
-  color: #B3AE94;
-}
-
-.extra1 {
-  background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat;
-  position: absolute;
-  top: 40px;
-  right: 0;
-  width: 148px;
-  height: 110px;
+/*
+********************************************************************************
+Breakpoints
+********************************************************************************
+*/
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 1.125rem;
+  }
+  /* Page Wrapper */
+  .page-wrapper {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #E4F1E4;
+  }
+  .page-wrapper #zen-intro {
+    text-align: center;
+    background-image: url("../images/underwater-nature-fish-coral-seaweed-starfish-generated-by-ai.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    width: 600px;
+    height: 300px;
+  }
+  /* Header */
+  header {
+    align-items: end;
+  }
+  h1 {
+    font-family: "Berkshire Swash", serif;
+    font-size: 4rem;
+    vertical-align: bottom;
+    color: white;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  }
+  h2 {
+    font-size: 1.5rem;
+    font-family: "Open Sans", sans-serif;
+    vertical-align: bottom;
+    color: white;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  }
+  /* Zen Summary */
+  #zen-summary {
+    display: flex;
+    flex-direction: column;
+    background-color: #55828B;
+    width: 100%;
+    height: 200px;
+    text-align: left;
+  }
+  #zen-summary p {
+    font-size: 1.25rem;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

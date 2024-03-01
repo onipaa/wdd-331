@@ -1,40 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 
-/*
-Color Pallete: 
-    Coolors
-    https://coolors.co/
-    https://coolors.co/e4f1e4-97c4ae-55828b-2d4a4d-1f2a33
-    Accessed 1 February 2024
-
-Fonts:
-    Google Fonts
-    https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap
-    Accessed 1 Feburary 2024
-
-HTML:
-
-CSS:
-    css Zen Garden default style v1.02
-    css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/
-    This file based on 'Tranquille' by Dave Shea
-    You may use this file as a foundation for any new work, but you may find it
-    easier to start from scratch. Not all elements are defined in this file, so
-    you'll most likely want to refer to the xhtml as well. Your images should be
-    linked as if the CSS file sits in the same folder as the images. ie. no paths.
-
-Images:
-	Image by rawpixel.com, Freepik
-	Accessed: 3 February 2024
-
-	We are revamping the images to match the "fantasy" like font Berkshire
-	Swash. Michaela will find some nice images. I think we will also replace
-	the squiggly circles at the bottom with those nice images. We can overlay
-	the images with a partial shaded circle so that the text pops.
-
-	We will reference the images here.
-*/
-
 /* ************************************************************************** */
 /* colors */
 $color_1: #E4F1E4;
@@ -250,3 +215,41 @@ footer {
 	width: 148px;
 	height: 110px;
 }
+
+
+/*
+REFERENCES:
+
+Color Pallete: 
+    Coolors
+    https://coolors.co/
+    https://coolors.co/e4f1e4-97c4ae-55828b-2d4a4d-1f2a33
+    Accessed 1 February 2024
+
+Fonts:
+    Google Fonts
+    https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap
+    Accessed 1 Feburary 2024
+
+HTML:
+
+CSS:
+    css Zen Garden default style v1.02
+    css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/
+    This file based on 'Tranquille' by Dave Shea
+    You may use this file as a foundation for any new work, but you may find it
+    easier to start from scratch. Not all elements are defined in this file, so
+    you'll most likely want to refer to the xhtml as well. Your images should be
+    linked as if the CSS file sits in the same folder as the images. ie. no paths.
+
+Images:
+	Image by rawpixel.com, Freepik
+	Accessed: 3 February 2024
+
+	We are revamping the images to match the "fantasy" like font Berkshire
+	Swash. Michaela will find some nice images. I think we will also replace
+	the squiggly circles at the bottom with those nice images. We can overlay
+	the images with a partial shaded circle so that the text pops.
+
+	We will reference the images here.
+*/

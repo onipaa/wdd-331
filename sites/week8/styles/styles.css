@@ -1,0 +1,96 @@
+@keyframes transformAnimation {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+.transform-animation {
+  animation: transformAnimation 3s ease infinite;
+}
+
+@keyframes opacityAnimation {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+.opacity-animation {
+  animation: opacityAnimation 2s ease-in-out infinite;
+}
+
+@keyframes colorAnimation {
+  0% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: green;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+.color-animation {
+  animation: colorAnimation 3s ease infinite alternate;
+}
+
+@keyframes positionAnimation {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 50%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+.position-animation {
+  position: relative;
+  animation: positionAnimation 4s ease infinite;
+}
+
+@keyframes keyframeAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.keyframe-animation {
+  animation: keyframeAnimation 2s linear infinite;
+}
+
+.transition-animation {
+  width: 100px;
+  height: 100px;
+  background-color: purple;
+  transition: width 2s, height 2s, background-color 2s;
+}
+
+.transition-animation:hover {
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+}
+
+.svg-animation circle {
+  fill: green;
+  transition: fill 2s;
+}
+
+.svg-animation circle:hover {
+  fill: red;
+}
+
+/*# sourceMappingURL=styles.css.map */

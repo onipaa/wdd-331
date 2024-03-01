@@ -1,0 +1,203 @@
+/*
+********************************************************************************
+B - elements (header, container, menu, checkbox, input)
+E - entities (menu item, list item, checkbox, caption, header title)
+M - modifier (disabled, highlighted, checked, fixed, size big, color yellow)
+
+
+tab       - 4 spaces consistently and easier to spot
+nesting   - no more than 3 or 4 levels (and should make sense)
+functions - should be simple for easy maintainability
+
+BEM (Block Element Modifier) is a popular naming convention for writing CSS and
+HTML that aims to create more modular and reusable code. It helps developers 
+create well-structured and maintainable front-end codebases by providing a clear
+and consistent way to name classes.
+
+Here's how BEM works:
+Block: A standalone component or module that is semantically meaningful on its
+own. Blocks are named in a way that describes their purpose or function.
+
+Element: Parts of a block that have no standalone meaning and are semantically
+tied to the block. Elements are named as a combination of the block name and 
+the element name, separated by a double underscore (__).
+
+Modifier: Flags on blocks or elements that alter their appearance, behavior, or
+state. Modifiers are named as a combination of the block or element name and 
+the modifier name, separated by a double hyphen (--).
+
+<div class="button button--large button--primary">
+    <span class="button__text">Click me</span>
+</div>
+
+In this example:
+
+.button: This is the block. It represents a standalone component, in this case,
+a button.
+
+.button--large: This is a modifier applied to the button block, indicating that
+it's a large-sized button.
+
+.button--primary: Another modifier applied to the button block, indicating that
+it's styled as a primary button.
+
+.button__text: This is an element of the button block. It represents the text
+inside the button.
+
+With BEM, the CSS corresponding to this HTML might look like:
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button--large {
+    padding: 15px 30px;
+    font-size: 20px;
+}
+
+.button--primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.button__text {
+    font-weight: bold;
+}
+
+ATTRIBUTION:
+    Hero Header Image:
+        <a href="https://www.freepik.com/free-photo/underwater-nature-fish-coral-seaweed-starfish-generated-by-ai_41218698.htm#query=fantasy&position=29&from_view=keyword&track=sph&uuid=ffb8d54d-75fa-44e3-b6e7-4f3b38eb3f4b">Image by vecstock</a> on Freepik
+        accessed on: 29 Feb 2024 7:13 PM
+
+    Vector Castle Moutains:
+        <a href="https://www.freepik.com/free-photo/nature-mystery-unveiled-by-generative-ai-technology-generative-ai_41073886.htm#fromView=search&page=1&position=3&uuid=4b6ada89-1745-4c9c-9c4c-f1367b976c9c">Image by vecstock</a> on Freepik
+        accessed on: 29 Feb 2024 8:26 PM
+
+git config --global user.email "john.maurice.harper@gmail.com"
+git config --global user.name "onipaa"
+
+********************************************************************************
+*/
+
+/*
+********************************************************************************
+globals
+********************************************************************************
+*/
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+// Colors
+$color_1: #E4F1E4;
+$color_2: #97C4AE;
+$color_3: #55828B;
+$color_4: #2D4A4D;
+$color_5: #1F2A33;
+$color_6: white;
+$color_7: black;
+
+// Fonts
+$font_1: 'Berkshire Swash', serif;
+$font_2: 'Open Sans', sans-serif;
+
+// Breakpoints
+$breakpoint_1: 700px;
+$breakpoint_2: 1000px;
+$breakpoint_3: 1400px;
+
+/*
+********************************************************************************
+globals
+********************************************************************************
+*/
+
+/* Page Wrapper */
+.page-wrapper {
+    background-color: $color_1;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Headings */
+h1 {
+    font-size: 3rem;
+    font-family: $font_1;
+}
+
+/*
+********************************************************************************
+Breakpoints
+********************************************************************************
+*/
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 1.125rem;
+    }
+
+    /* Page Wrapper */
+    .page-wrapper {
+        display: flex;
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: $color_1;
+        
+        #zen-intro {
+            text-align: center;
+            background-image: url('../images/underwater-nature-fish-coral-seaweed-starfish-generated-by-ai.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+            width: 600px;
+            height: 300px;
+        }
+    }
+
+    /* Header */
+    header {
+        align-items: end;
+    }
+
+    h1 {
+        font-family: $font_1;
+        font-size: 4rem;
+        vertical-align: bottom;
+        color: $color_6;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        font-family: $font_2;
+        vertical-align: bottom;
+        color: $color_6;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    }
+
+    /* Zen Summary */
+    #zen-summary {
+        display: flex;
+        flex-direction: column;;
+        background-color: $color_3;
+        width: 100%;
+        height: 200px;
+        text-align: left;
+
+        p {
+            font-size: 1.25rem;
+            font-family: $font_2;
+            color: $color_6;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+}

@@ -2,7 +2,6 @@ body {
   background-color: white;
   display: flex;
   margin: 0 auto;
-  max-width: 1000px;
   padding: 25px;
 }
 body .container-main {
@@ -15,7 +14,7 @@ body .container-main {
   justify-content: center;
   margin: 0 auto;
   padding: 10px;
-  width: 800px;
+  width: 625px;
   /*
   ********************************************************************************
   top, middle, bottom row containers

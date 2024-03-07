@@ -4,66 +4,40 @@ body {
   margin: 0 auto;
   padding: 25px;
 }
-body .container-main {
+
+.container-main {
   align-items: center;
   background-color: #152028;
   border-radius: 20px;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: centers;
   margin: 0 auto;
   padding: 10px;
-  width: 625px;
-  /*
-  ********************************************************************************
-  top, middle, bottom row containers
-  ********************************************************************************
-  */
-  /*
-  ********************************************************************************
-  top details
-  ********************************************************************************
-  */
-  /*
-  ********************************************************************************
-  middle details
-  ********************************************************************************
-  */
-  /*
-  ********************************************************************************
-  bottom details
-  ********************************************************************************
-  */
+  /* Top, middle, bottom row containers */
+  /* Top details */
+  /* Middle details */
 }
-body .container-main .container-top-row {
+.container-main .container-top-row,
+.container-main .container-middle-row,
+.container-main .container-bottom-row {
   display: flex;
-  justify-content: center;
-  width: 100%;
-  justify-content: space-evenly;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 10px;
-}
-body .container-main .container-middle-row {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  justify-content: space-evenly;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 10px;
-}
-body .container-main .container-bottom-row {
-  display: flex;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 10px;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
 }
-body .container-main .container-one {
+.container-main .container-one,
+.container-main .container-two,
+.container-main .container-three,
+.container-main .container-four,
+.container-main .container-five,
+.container-main .container-six {
   position: relative;
   width: 250px;
   height: 250px;
@@ -72,28 +46,19 @@ body .container-main .container-one {
   border-radius: 20px;
   background-color: #82ddb4;
   border: 1px solid #152028;
+  overflow: hidden;
 }
-body .container-main .container-one .circle-svg {
+.container-main .container-one .circle-svg {
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-body .container-main .container-one .circle {
+.container-main .container-one .circle {
   fill: darkred;
   animation: moveCircle 5s linear infinite;
 }
-body .container-main .container-two {
-  position: relative;
-  width: 250px;
-  height: 250px;
-  min-width: 250px;
-  min-height: 250px;
-  border-radius: 20px;
-  background-color: #82ddb4;
-  border: 1px solid #152028;
-}
-body .container-main .container-two .morphing-circle {
+.container-main .container-two .morphing-circle {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -105,10 +70,77 @@ body .container-main .container-two .morphing-circle {
   transition: all 0.5s ease;
   transform-origin: center;
 }
-body .container-main .container-two:hover .morphing-circle {
+.container-main .container-two:hover .morphing-circle {
   border-radius: 0%;
   background-color: white;
   transform: translate(-50%, -50%) rotate(180deg);
+}
+.container-main .container-three .curtain {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.container-main .container-three .curtain__wrapper {
+  width: 100%;
+  height: 100%;
+}
+.container-main .container-three input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  opacity: 0;
+}
+.container-main .container-three input[type=checkbox]:checked ~ div.curtain__panel--left {
+  transform: translateX(0);
+}
+.container-main .container-three input[type=checkbox]:checked ~ div.curtain__panel--right {
+  transform: translateX(0);
+}
+.container-main .container-three .curtain__panel {
+  background: #82ddb4;
+  width: 50%;
+  height: 100vh;
+  float: left;
+  position: relative;
+  z-index: 2;
+  transition: all 1s ease-out;
+}
+.container-main .container-three .curtain__panel--left {
+  transform: translateX(-25%);
+}
+.container-main .container-three .curtain__panel--left .half-circle--left {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  top: 120px;
+  left: 110px;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  background: darkred;
+  border-radius: 30px 30px 0 0;
+  z-index: 99;
+}
+.container-main .container-three .curtain__panel--right {
+  transform: translateX(25%);
+}
+.container-main .container-three .curtain__panel--right .half-circle--right {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  top: 120px;
+  left: 15px;
+  transform: translate(-50%, -50%) rotate(90deg);
+  background: darkred;
+  border-radius: 30px 30px 0 0;
+  z-index: 99;
+}
+.container-main .container-three .curtain__prize {
+  background: #82ddb4;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
 }
 @keyframes moveCircle {
   0%, 100% {
@@ -123,97 +155,6 @@ body .container-main .container-two:hover .morphing-circle {
   75% {
     transform: translate(0, 200px);
   }
-}
-body .container-main .container-three {
-  position: relative;
-  width: 250px;
-  height: 250px;
-  min-width: 250px;
-  min-height: 250px;
-  border-radius: 20px;
-  background-color: #82ddb4;
-  border: 1px solid #152028;
-  overflow: hidden;
-  /* Slide the first panel in */
-  /* Slide the second panel in */
-}
-body .container-main .container-three .curtain {
-  width: 100%; /* Ensures the component is the full screen width */
-  height: 100vh; /* We're using this for demo purposes */
-  overflow: hidden; /* Allows us to slide the panels outside the container without them showing */
-}
-body .container-main .container-three .curtain__wrapper {
-  width: 100%;
-  height: 100%;
-}
-body .container-main .container-three input[type=checkbox] {
-  position: absolute; /* Force the checkbox at the start of the container */
-  cursor: pointer; /* Indicate the curtain is clickable */
-  width: 100%; /* The checkbox is as wide as the component */
-  height: 100%; /* The checkbox is as tall as the component */
-  z-index: 100; /* Make sure the checkbox is on top of everything else */
-  opacity: 0; /* hide the checkbox */
-}
-body .container-main .container-three input[type=checkbox]:checked ~ div.curtain__panel--left {
-  transform: translateX(0);
-}
-body .container-main .container-three input[type=checkbox]:checked ~ div.curtain__panel--right {
-  transform: translateX(0);
-}
-body .container-main .container-three .curtain__panel {
-  background: orange;
-  width: 50%; /* Each panel takes up half the container */
-  height: 100vh; /* Used for demo purposes */
-  float: left; /* Makes sure panels are side-by-side */
-  position: relative; /* Needed to define the z-index */
-  z-index: 2; /* Plsaces the panels in front of the prize */
-  transition: all 3s ease-out; /* Animates the sliding transition */
-}
-body .container-main .container-three .curtain__panel--left {
-  transform: translateX(-100%);
-}
-body .container-main .container-three .curtain__panel--right {
-  transform: translateX(100%);
-}
-body .container-main .container-three .curtain__prize {
-  background: #82ddb4;
-  position: absolute; /* Forces the prize position into the container start */
-  z-index: 1; /* Places the prize behind the panels, which are z-index 2 */
-  width: 100%;
-  height: 100%;
-}
-body .container-main .container-four {
-  position: relative;
-  width: 250px;
-  height: 250px;
-  min-width: 250px;
-  min-height: 250px;
-  border-radius: 20px;
-  background-color: #82ddb4;
-  border: 1px solid #152028;
-  overflow: hidden;
-}
-body .container-main .container-five {
-  position: relative;
-  width: 250px;
-  height: 250px;
-  min-width: 250px;
-  min-height: 250px;
-  border-radius: 20px;
-  background-color: #82ddb4;
-  border: 1px solid #152028;
-  overflow: hidden;
-}
-body .container-main .container-six {
-  position: relative;
-  width: 250px;
-  height: 250px;
-  min-width: 250px;
-  min-height: 250px;
-  border-radius: 20px;
-  background-color: #82ddb4;
-  border: 1px solid #152028;
-  overflow: hidden;
 }
 
 /*# sourceMappingURL=styles.css.map */

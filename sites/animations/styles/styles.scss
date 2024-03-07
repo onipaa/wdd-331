@@ -2,7 +2,7 @@ $color-primary: #152028;
 $color-secondary: #346C7C;
 $color-tertiary: #182A2D;
 $color-quaternary: darkred;
-$color-quinary: #82ddb4; 
+$color-quinary: #82ddb4;
 $color-senary: white;
 $color-septenary: black;
 
@@ -13,19 +13,33 @@ body {
     max-width: 1000px;
     padding: 25px;
 
-    .container-main {
-        align-items: center;
-        background-color: $color-primary;
-        border-radius: 20px;
-        border: 1px solid $color-septenary;
-        display: flex;
-        flex-direction: column;
-        justify-content: center; // Adjusted this property
-        margin: 0 auto;
-        padding: 10px;
-        width: 800px;
-    
+.container-main {
+    align-items: center;
+    background-color: $color-primary;
+    border-radius: 20px;
+    border: 1px solid $color-septenary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10px;
+    width: 800px;
+/*
+********************************************************************************
+top, middle, bottom row containers
+********************************************************************************
+*/
         .container-top-row {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            justify-content: space-evenly;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+
+        .container-middle-row {
             display: flex;
             justify-content: center;
             width: 100%;
@@ -44,7 +58,11 @@ body {
             justify-content: space-evenly;
             padding: 10px;
         }
-        
+/*
+********************************************************************************
+top details
+********************************************************************************
+*/
         .container-one {
             position: relative;
             width: 250px;
@@ -85,7 +103,7 @@ body {
                 transform: translate(-50%, -50%);
                 height: 25%;
                 width: 25%;
-                background-color: $color-quaternary;   
+                background-color: $color-quaternary;
                 border-radius: 50%;
                 transition: all 0.5s ease;
                 transform-origin: center;
@@ -95,24 +113,33 @@ body {
                 border-radius: 0%;
                 background-color: $color-senary;
                 transform: translate(-50%, -50%) rotate(180deg);
-            }      
+            }
         }
 
         @keyframes moveCircle {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translate(0, 0);
             }
+
             25% {
                 transform: translate(200px, 0);
             }
+
             50% {
                 transform: translate(200px, 200px);
             }
+
             75% {
                 transform: translate(0, 200px);
             }
         }
-
+/*
+********************************************************************************
+middle details
+********************************************************************************
+*/
         .container-three {
             position: relative;
             width: 250px;
@@ -122,27 +149,65 @@ body {
             border-radius: 20px;
             background-color: $color-quinary;
             border: 1px solid $color-primary;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
+            overflow: hidden;
 
-          .circle {
-            fill: blue;
-            animation: splitAndMove 2s ease-in-out infinite alternate;
-          }
+            .curtain {
+                width: 100%; /* Ensures the component is the full screen width */
+                height: 100vh; /* We're using this for demo purposes */
+                overflow: hidden; /* Allows us to slide the panels outside the container without them showing */
+              }
+                
+              .curtain__wrapper {
+                width: 100%;
+                height: 100%;
+              }
+              
+              input[type=checkbox] {
+                position: absolute; /* Force the checkbox at the start of the container */
+                cursor: pointer; /* Indicate the curtain is clickable */
+                width: 100%; /* The checkbox is as wide as the component */
+                height: 100%; /* The checkbox is as tall as the component */
+                z-index: 100; /* Make sure the checkbox is on top of everything else */
+                opacity: 0; /* hide the checkbox */
+              }
+              
+              /* Slide the first panel in */
+              input[type=checkbox]:checked ~ div.curtain__panel--left {
+                  transform: translateX(0);
+              }
+                      
+              /* Slide the second panel in */
+              input[type=checkbox]:checked ~ div.curtain__panel--right {
+                  transform: translateX(0);
+              }
+                    
+              .curtain__panel {
+                background: orange;
+                width: 50%; /* Each panel takes up half the container */
+                height: 100vh; /* Used for demo purposes */
+                float: left; /* Makes sure panels are side-by-side */
+                position: relative; /* Needed to define the z-index */
+                z-index: 2; /* Plsaces the panels in front of the prize */
+                transition: all 3s ease-out; /* Animates the sliding transition */
+              }
+              
+              .curtain__panel--left {
+                transform: translateX(-100%);
+              }
+              
+              .curtain__panel--right {
+                  transform: translateX(100%);
+              }
+                
+              .curtain__prize {
+                background: $color-quinary;
+                position: absolute; /* Forces the prize position into the container start */
+                z-index: 1; /* Places the prize behind the panels, which are z-index 2 */
+                width: 100%;
+                height: 100%;
+              }
+        }
 
-          @keyframes splitAndMove {
-            0% {
-              transform: translateX(0%);
-            }
-            50% {
-              transform: translateX(-25px);
-            }
-            100% {
-              transform: translateX(-50px);
-            }
-          }
 
         .container-four {
             position: relative;
@@ -155,5 +220,33 @@ body {
             border: 1px solid $color-primary;
             overflow: hidden;
         }
-    }    
+/*
+********************************************************************************
+bottom details
+********************************************************************************
+*/
+        .container-five {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            min-width: 250px;
+            min-height: 250px;
+            border-radius: 20px;
+            background-color: $color-quinary;
+            border: 1px solid $color-primary;
+            overflow: hidden;
+        }
+
+        .container-six {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            min-width: 250px;
+            min-height: 250px;
+            border-radius: 20px;
+            background-color: $color-quinary;
+            border: 1px solid $color-primary;
+            overflow: hidden;
+        }
+    }
 }

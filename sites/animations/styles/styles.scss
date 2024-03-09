@@ -5,6 +5,7 @@ $color-quaternary: darkred;
 $color-quinary: #82ddb4;
 $color-senary: white;
 $color-septenary: black;
+$beat-duration: 60/120s; /* 120 bpm is modern dance music */
 
 body {
     background-color: $color-senary;
@@ -57,6 +58,7 @@ body {
         overflow: hidden;
     }
 
+    /* unique schtuff */
     .container-one {
         .circle-svg {
             top: 0;

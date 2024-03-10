@@ -209,6 +209,7 @@ body {
   height: 100%;
   background-color: #82ddb4;
   transition: left 0.3s ease;
+  z-index: 1;
 }
 .container-main .container-five .menu-content nav {
   padding: 20px;
@@ -224,12 +225,14 @@ body {
   text-decoration: none;
   color: white;
   font-size: 18px;
+  text-shadow: 1px 2px 2px #152028;
 }
 .container-main .container-five input[type=checkbox] {
   display: 1;
 }
-.container-main .container-five input[type=checkbox]:checked ~ div.hamburger-menu div.menu-content {
+.container-main .container-five input[type=checkbox]:checked ~ .menu-content {
   left: 0;
+  z-index: 99;
 }
 .container-main .container-five input[type=checkbox]:checked + .menu-icon {
   display: none;

@@ -230,7 +230,7 @@ body {
         .menu-icon {
             position: absolute;
             top: 30%;
-            left: 35%;
+            left: 30%;
             width: 100px;
             height: 100px;
             line-height: 50px;
@@ -250,6 +250,7 @@ body {
             height: 100%;
             background-color: $color-quinary;
             transition: left 0.3s ease;
+            z-index: 1;
         }
         
         .menu-content nav {
@@ -269,14 +270,16 @@ body {
             text-decoration: none;
             color: $color-senary;
             font-size: 18px;
+            text-shadow: 1px 2px 2px $color-primary;
         }
         
         input[type=checkbox] {
             display: 1;
         }
         
-        input[type=checkbox]:checked ~ div.hamburger-menu div.menu-content {
+        input[type=checkbox]:checked ~ .menu-content {
             left: 0;
+            z-index: 99;
         }
 
         input[type=checkbox]:checked + .menu-icon {

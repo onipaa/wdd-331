@@ -5,7 +5,6 @@ $color-quaternary: darkred;
 $color-quinary: #82ddb4;
 $color-senary: white;
 $color-septenary: black;
-$beat-duration: 60/120s; /* 120 bpm is modern dance music */
 
 body {
     background-color: $color-senary;
@@ -98,7 +97,7 @@ body {
     .container-three {
         .curtain {
             width: 100%;
-            height: 100vh;
+            height: 100%;
             overflow: hidden;
         }
 
@@ -190,6 +189,99 @@ body {
 
         75% {
             transform: translate(0, 200px);
+        }
+    }
+
+    .container-four {
+        display: flex;
+
+        .circle--pulser {
+            position: absolute;
+            top: 90px;
+            left: 90px;
+            width: 60px;
+            height: 60px;
+            background-color: $color-quaternary;
+            border-radius: 50%;
+            animation: pulse 0.25s linear infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.5);
+            }
+        }
+    }
+    
+    .container-five {
+        display: block;
+
+        .hamburger-menu {
+            position: relative;
+            width: 240px;
+            height: 100%;
+            background-color: $color-quinary;
+            overflow: hidden;
+        }
+        
+        .menu-icon {
+            position: absolute;
+            top: 30%;
+            left: 25%;
+            width: 100px;
+            height: 100px;
+            line-height: 50px;
+            font-size: 100px;
+            text-align: center;
+            color: $color-senary;
+            cursor: pointer;
+            text-shadow: 1px 2px 2px $color-primary;
+            z-index: 2;
+        }
+        
+        .menu-content {
+            position: absolute;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: $color-quinary;
+            transition: left 0.3s ease;
+        }
+        
+        .menu-content nav {
+            padding: 20px;
+        }
+        
+        .menu-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .menu-content li {
+            margin-bottom: 15px;
+        }
+        
+        .menu-content a {
+            text-decoration: none;
+            color: $color-senary;
+            font-size: 18px;
+        }
+        
+        input[type=checkbox] {
+            display: 1;
+        }
+        
+        input[type=checkbox]:checked ~ .hamburger-menu .menu-content {
+            left: 0;
+        }
+
+        input[type=checkbox]:checked + .menu-icon {
+            display: none;
         }
     }
 }

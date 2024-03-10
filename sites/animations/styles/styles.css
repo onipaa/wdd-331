@@ -18,7 +18,6 @@ body {
   /* Top, middle, bottom row containers */
   /* Top details */
   /* unique schtuff */
-  /* Middle details */
 }
 .container-main .container-top-row,
 .container-main .container-middle-row,
@@ -229,7 +228,7 @@ body {
 .container-main .container-five input[type=checkbox] {
   display: 1;
 }
-.container-main .container-five input[type=checkbox]:checked ~ .hamburger-menu .menu-content {
+.container-main .container-five input[type=checkbox]:checked ~ div.hamburger-menu div.menu-content {
   left: 0;
 }
 .container-main .container-five input[type=checkbox]:checked + .menu-icon {

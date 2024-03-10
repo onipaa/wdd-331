@@ -93,7 +93,6 @@ body {
         }
     }
 
-    /* Middle details */
     .container-three {
         .curtain {
             width: 100%;
@@ -231,7 +230,7 @@ body {
         .menu-icon {
             position: absolute;
             top: 30%;
-            left: 25%;
+            left: 30%;
             width: 100px;
             height: 100px;
             line-height: 50px;
@@ -276,7 +275,7 @@ body {
             display: 1;
         }
         
-        input[type=checkbox]:checked ~ .hamburger-menu .menu-content {
+        input[type=checkbox]:checked ~ div.hamburger-menu div.menu-content {
             left: 0;
         }
 

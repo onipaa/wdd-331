@@ -49,12 +49,3 @@ emailElement.value = 'me@me.';
 emailElement.value = 'me@me.com';
 
 document.getElementById('email').click();
-
-
-portrait practice:
-    from my pinterest faces
-    https://i.pinimg.com/originals/d2/c4/56/d2c45669f6821604dea6b4840ce6473a.jpg
-
-    about 30 minutes > stop
-
-1 8018570777

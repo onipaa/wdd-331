@@ -1,0 +1,93 @@
+body {
+    max-width: 1200px;
+    margin: auto 0; 
+}
+
+@mixin viewport($width, $height) {
+    .playing-card--top,
+    .playing-card--bottom,
+    .playing-card--front {
+        background-color: beige;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: $height;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        width: $width;
+    }
+
+    .playing-card--top {
+        background-image: url('../images/official-back-01.svg');
+    }
+
+    .playing-card--bottom {
+        background-image: url('../images/official-back-02.svg');
+    }
+
+    .playing-card--front {
+        background-image: url('../images/official-front.svg');
+    }
+}
+
+/*
+********************************************************************************
+Cleveland Institute of Art (https://www.cia.edu/):
+It’s vitally important that you stay consistent with the size, resolution, and 
+margins of the kind of card you want to make. The standard size of a poker card 
+is a file with the dimensions of 2.74”x3.74” or 822x1122 pixels at 300 dpi.
+
+    https://www.cia.edu/blog/2014/10/designing-playing-cards#:~:text=It%27s%20vitally%20important%20that%20you,idea%20for%20making%20your%20cards.
+    Referenced: 15 March 2024 10:33 PM MST
+
+My plan:
+    ** Medium Viewport full size **
+    - 822px x 1122px
+    - SVG at 100%
+
+    ** Small Viewport Reduce by 25% **
+    - 0.75 of medium
+
+    ** Large Viewport (Increase by 25%) **
+    - 1.25 of medium
+
+    ** Use Color Dragon from Vecteezy **
+    - need image with no arbitration.
+    - 
+********************************************************************************
+*/
+
+/* cards */
+$medium-width: 822px;
+$medium-height: 1122px;
+  
+$small-ratio: 0.75; // Assuming a 3:4 ratio
+$small-width: $medium-width * $small-ratio;
+$small-height: $medium-height * $small-ratio;
+  
+$large-ratio: 1.25; // Assuming a 5:4 ratio
+$large-width: $medium-width * $large-ratio;
+$large-height: $medium-height * $large-ratio;
+
+/* viewports */
+$responsive-small: 700px;
+$responsive-medium: 900px;
+$responsive-large: 1200px;
+
+@media screen and (min-width: $responsive-small) {
+    .card-container {
+        @include viewport($small-width, $small-height);
+    }
+}
+
+@media screen and (min-width: $responsive-medium) {
+    .card-container {
+        @include viewport($medium-width, $medium-height);
+    }
+}
+
+@media screen and (min-width: $responsive-large) {
+    .card-container {
+        @include viewport($large-width, $large-height);
+    }
+}

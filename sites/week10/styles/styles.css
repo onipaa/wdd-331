@@ -1,0 +1,105 @@
+@charset "UTF-8";
+body {
+  max-width: 1200px;
+  margin: auto 0;
+}
+
+/*
+********************************************************************************
+Cleveland Institute of Art (https://www.cia.edu/):
+It’s vitally important that you stay consistent with the size, resolution, and 
+margins of the kind of card you want to make. The standard size of a poker card 
+is a file with the dimensions of 2.74”x3.74” or 822x1122 pixels at 300 dpi.
+
+    https://www.cia.edu/blog/2014/10/designing-playing-cards#:~:text=It%27s%20vitally%20important%20that%20you,idea%20for%20making%20your%20cards.
+    Referenced: 15 March 2024 10:33 PM MST
+
+My plan:
+    ** Medium Viewport full size **
+    - 822px x 1122px
+    - SVG at 100%
+
+    ** Small Viewport Reduce by 25% **
+    - 0.75 of medium
+
+    ** Large Viewport (Increase by 25%) **
+    - 1.25 of medium
+
+    ** Use Color Dragon from Vecteezy **
+    - need image with no arbitration.
+    - 
+********************************************************************************
+*/
+/* cards */
+/* viewports */
+@media screen and (min-width: 700px) {
+  .card-container .playing-card--top,
+  .card-container .playing-card--bottom,
+  .card-container .playing-card--front {
+    background-color: beige;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 841.5px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 616.5px;
+  }
+  .card-container .playing-card--top {
+    background-image: url("../images/official-back-01.svg");
+  }
+  .card-container .playing-card--bottom {
+    background-image: url("../images/official-back-02.svg");
+  }
+  .card-container .playing-card--front {
+    background-image: url("../images/official-front.svg");
+  }
+}
+@media screen and (min-width: 900px) {
+  .card-container .playing-card--top,
+  .card-container .playing-card--bottom,
+  .card-container .playing-card--front {
+    background-color: beige;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1122px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 822px;
+  }
+  .card-container .playing-card--top {
+    background-image: url("../images/official-back-01.svg");
+  }
+  .card-container .playing-card--bottom {
+    background-image: url("../images/official-back-02.svg");
+  }
+  .card-container .playing-card--front {
+    background-image: url("../images/official-front.svg");
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-container .playing-card--top,
+  .card-container .playing-card--bottom,
+  .card-container .playing-card--front {
+    background-color: beige;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1402.5px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 1027.5px;
+  }
+  .card-container .playing-card--top {
+    background-image: url("../images/official-back-01.svg");
+  }
+  .card-container .playing-card--bottom {
+    background-image: url("../images/official-back-02.svg");
+  }
+  .card-container .playing-card--front {
+    background-image: url("../images/official-front.svg");
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

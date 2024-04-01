@@ -1,0 +1,145 @@
+// Variables
+$font-family: 'Arial', sans-serif;
+$background-color: #f0f0f0;
+$text-color: #333;
+$border-color: white;
+$primary-color: #3D3B48;
+$secondary-color: #0A0D19;
+$tertiary-color: #A16B69;
+$quaternary-color: #C7B7A8;
+$quinary-color: #535C66;
+$highlight-color: #ffd700;
+$shadow-color: rgba(0, 0, 0, 0.2);
+$shadow-hover: rgba(0, 0, 0, 0.75);
+
+// Mixin for animations
+@mixin animate($name, $duration) {
+    animation: #{$name} $duration ease-in-out;
+}
+
+// General body styling
+body {
+    font-family: $font-family;
+    background-color: $background-color;
+    color: $text-color;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+// Wrapper
+.page-wrapper {
+    width: 80%;
+    min-width: 501px;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+
+    @media screen and (max-width: 500px) and (min-width: 300px) {
+        width: 85%;
+        padding: 10px;
+    }
+}
+
+// Introduction section
+.intro header {
+    background-color: $primary-color;
+    /* background-blend-mode: multiply; */
+    text-align: center;
+    color: #fff;
+    padding: 40px 0;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+    h1, h2 {
+        margin: 0;
+        padding: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.811);
+    }
+
+    h1 {
+        @include animate(fadeInDown, 2s);
+    }
+
+    h2 {
+        @include animate(fadeInUp, 2s);
+    }
+
+    background-image: url('../images/hero-small.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+}
+
+// Summary and preamble sections
+.summary,
+.preamble,
+.main.supporting {
+    background-color: #fff;
+    border: 1px dotted $border-color;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px $shadow-color;
+    transition: box-shadow 0.5s ease-in-out;
+
+    &:hover {
+        box-shadow: 0 8px 16px $shadow-hover;
+    }
+}
+
+// Links
+a {
+    color: $quaternary-color;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+        color: $highlight-color;
+    }
+}
+
+// Header image
+#header-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+// Background Texture
+body {
+    background-image: url('../images/background-small.jpg');
+    background-size: cover;
+}
+
+// Additional styles
+h3 {
+    color: $secondary-color;
+}
+
+.summary {
+    background-color: $primary-color;
+    color: white;
+}
+
+.preamble {
+    background-color: $secondary-color;
+    color: white;
+    
+    h3 {
+        color: white;
+    }
+}
+
+.main.supporting {
+    background-color: $tertiary-color;
+    color: white;
+    
+    h3 {
+        color: white;
+        
+    }
+}

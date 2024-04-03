@@ -1,4 +1,209 @@
 @media (max-width: 550px) {
+  /* Variables */
+  /* Mixin for animations */
+  @keyframes fade-in-down {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  /* General body styling */
+  body {
+    font-family: "Arial", sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/background-small.jpg");
+    background-size: cover;
+  }
+  /* Wrapper */
+  .page-wrapper {
+    width: 80%;
+    min-width: 501px;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+  }
+  /* Introduction section */
+  /* Summary and preamble sections */
+  /* Summary */
+  /* Header image */
+  /* Sidebar */
+}
+@media screen and (max-width: 550px) and (width <= 500px) {
+  .page-wrapper {
+    width: 85%;
+    padding: 10px;
+  }
+}
+@media (max-width: 550px) {
+  .intro header {
+    background-color: #3D3B48;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: fade-in-down 2s ease-in-out;
+    background-image: url("../images/hero-small.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+  }
+  .intro header h1, .intro header h2 {
+    margin: 0;
+    padding: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.811);
+  }
+  a {
+    color: #C7B7A8;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: #ffd700;
+  }
+  .preamble {
+    background-color: #0A0D19;
+    color: white;
+    border: 1px dotted white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.5s ease-in-out;
+  }
+  .preamble:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.75);
+  }
+  .preamble h3 {
+    color: white;
+  }
+  .main.supporting {
+    background-color: #A16B69;
+    color: white;
+    border: 1px dotted white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.5s ease-in-out;
+  }
+  .main.supporting:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.75);
+  }
+  .main.supporting h3 {
+    color: white;
+  }
+  .summary {
+    background-color: #C7B7A8;
+    border: 1px dotted white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.5s ease-in-out;
+  }
+  .summary:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.75);
+  }
+  .summary a {
+    color: black;
+    font-weight: 800;
+  }
+  #header-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+  }
+  .sidebar {
+    background-color: #535C66;
+    border: 1px dotted white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.5s ease-in-out;
+  }
+  .sidebar:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.75);
+  }
+  .sidebar .select {
+    color: white;
+    padding-left: 20px;
+  }
+  .sidebar .design-selection {
+    color: black;
+    grid-template-rows: repeat(10, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 10px;
+    width: 87%;
+  }
+  .sidebar .design-selection nav li {
+    display: grid;
+    color: white;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .sidebar .design-selection nav li .design-name {
+    display: flex;
+    background-color: #C7B7A8;
+    color: white;
+    text-shadow: 2px 2px 3px black;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    background-image: url("../images/fairy-background-small.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    font-size: 1.5em;
+    font-weight: 800;
+    margin-top: 20px;
+    border: 1px dotted white;
+  }
+  .sidebar .design-selection nav li .designer-name {
+    color: white;
+  }
+  .sidebar .design-archives h3 {
+    color: white;
+    padding-left: 20px;
+  }
+  .sidebar .design-archives nav li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .sidebar .zen-resources h3 {
+    color: white;
+    padding-left: 20px;
+  }
+  .sidebar .zen-resources ul li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+@media (min-width: 551px) and (max-width: 750px) {
   body {
     font-family: "Arial", sans-serif;
     background-color: #f0f0f0;
@@ -16,13 +221,13 @@
     padding: 20px;
   }
 }
-@media screen and (max-width: 550px) and (max-width: 500px) and (min-width: 300px) {
+@media screen and (min-width: 551px) and (max-width: 750px) and (max-width: 500px) and (min-width: 300px) {
   .page-wrapper {
     width: 85%;
     padding: 10px;
   }
 }
-@media (max-width: 550px) {
+@media (min-width: 551px) and (max-width: 750px) {
   .intro header {
     background-color: #3D3B48;
     /* background-blend-mode: multiply; */
@@ -172,112 +377,6 @@
     margin: 0;
   }
 }
-@media (min-width: 551px) and (max-width: 750px) {
-  body {
-    font-family: "Arial", sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-  }
-  .page-wrapper {
-    width: 80%;
-    min-width: 501px;
-    max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
-    padding: 20px;
-  }
-}
-@media screen and (min-width: 551px) and (max-width: 750px) and (max-width: 500px) and (min-width: 300px) {
-  .page-wrapper {
-    width: 85%;
-    padding: 10px;
-  }
-}
-@media (min-width: 551px) and (max-width: 750px) {
-  .intro header {
-    background-color: #3D3B48;
-    /* background-blend-mode: multiply; */
-    text-align: center;
-    color: #fff;
-    padding: 40px 0;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    background-image: url("../images/hero-small.jpg");
-    background-size: cover;
-    background-position: center;
-    padding: 100px 0;
-  }
-  .intro header h1, .intro header h2 {
-    margin: 0;
-    padding: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.811);
-  }
-  .intro header h1 {
-    animation: fadeInDown 2s ease-in-out;
-  }
-  .intro header h2 {
-    animation: fadeInUp 2s ease-in-out;
-  }
-  .summary,
-  .preamble,
-  .main.supporting {
-    background-color: #fff;
-    border: 1px dotted white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.5s ease-in-out;
-  }
-  .summary:hover,
-  .preamble:hover,
-  .main.supporting:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.75);
-  }
-  a {
-    color: #C7B7A8;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-    color: #ffd700;
-  }
-  #header-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto 20px;
-  }
-  body {
-    background-image: url("../images/background-small.jpg");
-    background-size: cover;
-  }
-  h3 {
-    color: #0A0D19;
-  }
-  .summary {
-    background-color: #3D3B48;
-    color: white;
-  }
-  .preamble {
-    background-color: #0A0D19;
-    color: white;
-  }
-  .preamble h3 {
-    color: white;
-  }
-  .main.supporting {
-    background-color: #A16B69;
-    color: white;
-  }
-  .main.supporting h3 {
-    color: white;
-  }
-}
 @media (min-width: 751px) and (max-width: 1050px) {
   body {
     font-family: "Arial", sans-serif;
@@ -382,6 +481,74 @@
   }
   .main.supporting h3 {
     color: white;
+  }
+  .sidebar {
+    background-color: #535C66;
+    border: 1px dotted white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.5s ease-in-out;
+  }
+  .sidebar:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.75);
+  }
+  .sidebar .select {
+    color: white;
+    padding-left: 20px;
+  }
+  .sidebar .design-selection {
+    color: black;
+    grid-template-rows: repeat(10, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 10px;
+    width: 87%;
+  }
+  .sidebar .design-selection nav li {
+    display: grid;
+    color: white;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .sidebar .design-selection nav li .design-name {
+    display: flex;
+    background-color: #C7B7A8;
+    color: white;
+    text-shadow: #0A0D19;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    background-image: url("../images/hero-small.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    font-size: larger;
+    margin-top: 20px;
+    border: 1px dotted white;
+  }
+  .sidebar .design-selection nav li .designer-name {
+    color: white;
+  }
+  .sidebar .design-archives h3 {
+    color: white;
+    padding-left: 20px;
+  }
+  .sidebar .design-archives nav li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .sidebar .zen-resources h3 {
+    color: white;
+    padding-left: 20px;
+  }
+  .sidebar .zen-resources ul li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
   }
 }
 @media (min-width: 1051px) {
@@ -488,6 +655,74 @@
   }
   .main.supporting h3 {
     color: white;
+  }
+  .sidebar {
+    background-color: #535C66;
+    border: 1px dotted white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.5s ease-in-out;
+  }
+  .sidebar:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.75);
+  }
+  .sidebar .select {
+    color: white;
+    padding-left: 20px;
+  }
+  .sidebar .design-selection {
+    color: black;
+    grid-template-rows: repeat(10, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 10px;
+    width: 87%;
+  }
+  .sidebar .design-selection nav li {
+    display: grid;
+    color: white;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .sidebar .design-selection nav li .design-name {
+    display: flex;
+    background-color: #C7B7A8;
+    color: white;
+    text-shadow: #0A0D19;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    background-image: url("../images/hero-small.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    font-size: larger;
+    margin-top: 20px;
+    border: 1px dotted white;
+  }
+  .sidebar .design-selection nav li .designer-name {
+    color: white;
+  }
+  .sidebar .design-archives h3 {
+    color: white;
+    padding-left: 20px;
+  }
+  .sidebar .design-archives nav li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .sidebar .zen-resources h3 {
+    color: white;
+    padding-left: 20px;
+  }
+  .sidebar .zen-resources ul li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
   }
 }
 /*

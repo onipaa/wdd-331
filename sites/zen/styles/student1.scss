@@ -1,4 +1,4 @@
-// Variables
+/* Variables */
 $font-family: 'Arial', sans-serif;
 $background-color: #f0f0f0;
 $text-color: #333;
@@ -9,15 +9,37 @@ $tertiary-color: #A16B69;
 $quaternary-color: #C7B7A8;
 $quinary-color: #535C66;
 $highlight-color: #ffd700;
-$shadow-color: rgba(0, 0, 0, 0.2);
-$shadow-hover: rgba(0, 0, 0, 0.75);
+$shadow-color: rgb(0 0 0 / 20%);
+$shadow-hover: rgb(0 0 0 / 75%);
+$name: slidein;
+$duration: 1s;
 
-// Mixin for animations
-@mixin animate($name, $duration) {
-    animation: #{$name} $duration ease-in-out;
+/* Mixin for animations */
+@keyframes fade-in-down {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-// General body styling
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* General body styling */
 body {
     font-family: $font-family;
     background-color: $background-color;
@@ -25,9 +47,11 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-image: url('../images/background-small.jpg');
+    background-size: cover;
 }
 
-// Wrapper
+/* Wrapper */
 .page-wrapper {
     width: 80%;
     min-width: 501px;
@@ -36,35 +60,26 @@ body {
     overflow: hidden;
     padding: 20px;
 
-    @media screen and (max-width: 500px) and (min-width: 300px) {
+    @media screen and (width <= 500px) {
         width: 85%;
         padding: 10px;
     }
 }
 
-// Introduction section
+/* Introduction section */
 .intro header {
     background-color: $primary-color;
-    /* background-blend-mode: multiply; */
     text-align: center;
     color: #fff;
-    padding: 40px 0;
     margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgb(0 0 0 / 20%);
+    animation: fade-in-down 2s ease-in-out;
 
     h1, h2 {
         margin: 0;
         padding: 0;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.811);
-    }
-
-    h1 {
-        @include animate(fadeInDown, 2s);
-    }
-
-    h2 {
-        @include animate(fadeInUp, 2s);
+        text-shadow: 2px 2px 4px rgb(0 0 0 / 81.1%);
     }
 
     background-image: url('../images/hero-small.jpg');
@@ -73,24 +88,6 @@ body {
     padding: 100px 0;
 }
 
-// Summary and preamble sections
-.summary,
-.preamble,
-.main.supporting {
-    background-color: #fff;
-    border: 1px dotted $border-color;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px $shadow-color;
-    transition: box-shadow 0.5s ease-in-out;
-
-    &:hover {
-        box-shadow: 0 8px 16px $shadow-hover;
-    }
-}
-
-// Links
 a {
     color: $quaternary-color;
     text-decoration: none;
@@ -101,34 +98,21 @@ a {
     }
 }
 
-// Header image
-#header-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto 20px;
-}
-
-// Background Texture
-body {
-    background-image: url('../images/background-small.jpg');
-    background-size: cover;
-}
-
-// Additional styles
-h3 {
-    color: $secondary-color;
-}
-
-.summary {
-    background-color: $primary-color;
-    color: white;
-}
-
+/* Summary and preamble sections */
 .preamble {
     background-color: $secondary-color;
     color: white;
-    
+    border: 1px dotted $border-color;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px $shadow-color;
+    transition: box-shadow 0.5s ease-in-out;
+
+    &:hover {
+        box-shadow: 0 8px 16px $shadow-hover;
+    }
+
     h3 {
         color: white;
     }
@@ -137,13 +121,51 @@ h3 {
 .main.supporting {
     background-color: $tertiary-color;
     color: white;
-    
+    border: 1px dotted $border-color;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px $shadow-color;
+    transition: box-shadow 0.5s ease-in-out;
+
+    &:hover {
+        box-shadow: 0 8px 16px $shadow-hover;
+    }
+
     h3 {
         color: white;
-        
     }
 }
 
+/* Summary */
+.summary {
+    background-color: $quaternary-color;
+    border: 1px dotted $border-color;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px $shadow-color;
+    transition: box-shadow 0.5s ease-in-out;
+
+    &:hover {
+        box-shadow: 0 8px 16px $shadow-hover;
+    }
+
+    a {
+        color: black;
+        font-weight: 800;
+    }
+}
+
+/* Header image */
+#header-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* Sidebar */
 .sidebar {
     background-color: $quinary-color;
     border: 1px dotted $border-color;
@@ -168,33 +190,33 @@ h3 {
         grid-auto-rows: auto;
         grid-gap: 10px;
         width: 87%;
-    
+
         nav li {
             display: grid;
             color: white;
             list-style-type: none;
             padding: 0;
             margin: 0;
-    
+
             .design-name {
                 display: flex;
                 background-color: $quaternary-color;
                 color: white;
-                text-shadow: #0A0D19;
-                justify-content: center;;
+                text-shadow: 2px 2px 3px black;
+                justify-content: center;
                 align-items: center;
                 padding-left: 10px;
-                background-image: url('../images/hero-small.jpg');
-                background-blend-mode: multiply;
+                background-image: url('../images/fairy-background-small.jpg');
                 background-size: cover;
                 background-position: center;
                 height: 100px;
-                font-size: larger;
+                font-size: 1.5em;
+                font-weight: 800;
                 margin-top: 20px;
                 border: 1px dotted white;
             }
-    
-            & .designer-name {
+
+            .designer-name {
                 color: white;
             }
         }
@@ -225,5 +247,4 @@ h3 {
             margin: 0;
         }
     }
-
 }

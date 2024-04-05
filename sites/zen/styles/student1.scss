@@ -248,3 +248,13 @@ a {
         }
     }
 }
+
+.extra1 {
+    background-image: url("../images/zen-garden-logo.svg");
+    background-size: 500px 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 500px;
+    height: 500px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}

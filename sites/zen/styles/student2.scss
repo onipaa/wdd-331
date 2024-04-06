@@ -229,6 +229,7 @@ h3 {
 ////////////////////////////////////////////////////////////////////////// 
 ///////////////////////////////// Mixins /////////////////////////////////
 //////////////////////////////////////////////////////////////////////////
+
 $breakpoint-medium: 768px;
 $breakpoint-large: 1024px;
 
@@ -249,7 +250,8 @@ $breakpoint-large: 1024px;
     color: $text-color;
 }
 
-// Usage with media queries for medium and large screens
+// Media queries for medium and large screens //
+
 .summary, .preamble, .main.supporting {
     transition: box-shadow 0.5s ease-in-out;
 

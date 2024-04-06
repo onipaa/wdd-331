@@ -224,6 +224,63 @@ h3 {
             padding: 0;
             margin: 0;
         }
+        
     }
 
+    ///////////////////////////////////////////////////////////////////////// 
+///////////////////////////////// Mixins /////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+
+$breakpoint-medium: 768px;
+$breakpoint-large: 1024px;
+
+// Mixins
+@mixin box-shadow($x-offset, $y-offset, $blur, $spread, $color) {
+    box-shadow: $x-offset $y-offset $blur $spread $color;
+}
+
+@mixin flex-center($direction: row) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin theme-colors($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+}
+
+// Media queries for medium and large screens //
+
+.summary, .preamble, .main.supporting {
+    transition: box-shadow 0.5s ease-in-out;
+
+    @media (min-width: $breakpoint-medium) {
+        @include box-shadow(0, 4px, 8px, 0, $shadow-color);
+
+        &:hover {
+            @include box-shadow(0, 8px, 16px, 0, $shadow-hover);
+        }
+    }
+}
+
+.intro header {
+    padding: 40px 0;
+    margin-bottom: 20px;
+    border-radius: 8px;
+
+    @media (min-width: $breakpoint-medium) {
+        @include flex-center(column);
+        @include theme-colors($primary-color, white);
+    }
+}
+
+.sidebar .select {
+    padding-left: 20px;
+
+    @media (min-width: $breakpoint-medium) {
+        @include theme-colors($quinary-color, white);
+    }
+}
 }

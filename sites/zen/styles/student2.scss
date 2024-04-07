@@ -1,6 +1,6 @@
 // Variables
 $font-family: 'Arial', sans-serif;
-$background-color: #f0f0f0;
+$background-color: #F0F0F0;
 $text-color: #333;
 $border-color: white;
 $primary-color: #3D3B48;
@@ -8,15 +8,13 @@ $secondary-color: #0A0D19;
 $tertiary-color: #A16B69;
 $quaternary-color: #C7B7A8;
 $quinary-color: #535C66;
-$highlight-color: #ffd700;
+$highlight-color: #FFD700;
 $shadow-color: rgba(0, 0, 0, 0.2);
 $shadow-hover: rgba(0, 0, 0, 0.75);
-
 // Mixin for animations
 @mixin animate($name, $duration) {
     animation: #{$name} $duration ease-in-out;
 }
-
 // General body styling
 body {
     font-family: $font-family;
@@ -26,7 +24,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
 // Wrapper
 .page-wrapper {
     width: 80%;
@@ -35,13 +32,11 @@ body {
     margin: auto;
     overflow: hidden;
     padding: 20px;
-
     @media screen and (max-width: 500px) and (min-width: 300px) {
         width: 85%;
         padding: 10px;
     }
 }
-
 // Introduction section
 .intro header {
     background-color: $primary-color;
@@ -53,27 +48,22 @@ body {
     border-radius: 8px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     animation: fade-in-down 2s ease-in-out;
-
     h1, h2 {
         margin: 0;
         padding: 0;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.811);
     }
-
     h1 {
         @include animate(fadeInDown, 2s);
     }
-
     h2 {
         @include animate(fadeInUp, 2s);
     }
-
     background-image: url('../images/hero-small.jpg');
     background-size: cover;
     background-position: center;
     padding: 100px 0;
 }
-
 // Summary and preamble sections
 .summary,
 .preamble,
@@ -85,23 +75,19 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 8px $shadow-color;
     transition: box-shadow 0.5s ease-in-out;
-
     &:hover {
         box-shadow: 0 8px 16px $shadow-hover;
     }
 }
-
 // Links
 a {
     color: $quaternary-color;
     text-decoration: none;
-
     &:hover {
         text-decoration: underline;
         color: $highlight-color;
     }
 }
-
 // Header image
 #header-image {
     max-width: 100%;
@@ -109,42 +95,33 @@ a {
     display: block;
     margin: 0 auto 20px;
 }
-
 // Background Texture
 body {
     background-image: url('../images/background-small.jpg');
     background-size: cover;
 }
-
 // Additional styles
 h3 {
     color: $secondary-color;
 }
-
 .summary {
     background-color: $primary-color;
     color: white;
 }
-
 .preamble {
     background-color: $secondary-color;
     color: white;
-    
     h3 {
         color: white;
     }
 }
-
 .main.supporting {
     background-color: $tertiary-color;
     color: white;
-    
     h3 {
         color: white;
-        
     }
 }
-
 .sidebar {
     background-color: $quinary-color;
     border: 1px dotted $border-color;
@@ -153,30 +130,25 @@ h3 {
     border-radius: 8px;
     box-shadow: 0 4px 8px $shadow-color;
     transition: box-shadow 0.5s ease-in-out;
-
     &:hover {
         box-shadow: 0 8px 16px $shadow-hover;
     }
-
     .select {
         color: white;
         padding-left: 20px;
     }
-
     .design-selection {
         color: black;
         grid-template-rows: repeat(10, 1fr);
         grid-auto-rows: auto;
         grid-gap: 10px;
         width: 87%;
-    
         nav li {
             display: grid;
             color: white;
             list-style-type: none;
             padding: 0;
             margin: 0;
-    
             .design-name {
                 display: flex;
                 background-color: $quaternary-color;
@@ -194,39 +166,33 @@ h3 {
                 margin-top: 20px;
                 border: 1px dotted white;
             }
-    
             & .designer-name {
                 color: white;
             }
         }
     }
-
     .design-archives {
         h3 {
             color: white;
             padding-left: 20px;
         }
-
         nav li {
             list-style-type: none;
             padding: 0;
             margin: 0;
         }
     }
-
     .zen-resources {
         h3 {
             color: white;
             padding-left: 20px;
         }
-
         ul li {
             list-style-type: none;
             padding: 0;
             margin: 0;
         }
     }
-
     .extra1 {
     background-image: url("../images/zen-garden-logo.svg");
     background-size: 500px 500px;
@@ -236,62 +202,48 @@ h3 {
     height: 500px;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
 }
-    
-////////////////////////////////////////////////////////////////////////// 
+//////////////////////////////////////////////////////////////////////////
 ///////////////////////////////// Mixins /////////////////////////////////
 //////////////////////////////////////////////////////////////////////////
-
 $breakpoint-medium: 768px;
 $breakpoint-large: 1024px;
-
 // Mixins
 @mixin box-shadow($x-offset, $y-offset, $blur, $spread, $color) {
     box-shadow: $x-offset $y-offset $blur $spread $color;
 }
-
 @mixin flex-center($direction: row) {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: $direction;
 }
-
 @mixin theme-colors($bg-color, $text-color) {
     background-color: $bg-color;
     color: $text-color;
 }
-
 // Media queries for medium and large screens //
-
 .summary, .preamble, .main.supporting {
     transition: box-shadow 0.5s ease-in-out;
-
     @media (min-width: $breakpoint-medium) {
         @include box-shadow(0, 4px, 8px, 0, $shadow-color);
-
         &:hover {
             @include box-shadow(0, 8px, 16px, 0, $shadow-hover);
         }
     }
 }
-
 .intro header {
     padding: 40px 0;
     margin-bottom: 20px;
     border-radius: 8px;
-
     @media (min-width: $breakpoint-medium) {
         @include flex-center(column);
         @include theme-colors($primary-color, white);
     }
 }
-
 .sidebar .select {
     padding-left: 20px;
-
     @media (min-width: $breakpoint-medium) {
         @include theme-colors($quinary-color, white);
     }
 }
-
 }

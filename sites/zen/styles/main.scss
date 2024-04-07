@@ -5,7 +5,9 @@ $breakpoint-medium-min: 576px;
 $breakpoint-medium-max: 775px;
 $breakpoint-large-min: 776px;
 
-@media screen and (min-width: $breakpoint-small-min) and (max-width: $breakpoint-small-max) {
+/* @media screen and (min-width: $breakpoint-small-min) and (max-width: $breakpoint-small-max) { */
+
+@media screen and (max-width: $breakpoint-small-max) {
     @import 'student1';
 }
   

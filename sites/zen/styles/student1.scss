@@ -40,25 +40,21 @@ $duration: 1s;
 
 /* General body styling */
 body {
-    width: 85%;
+    width: 95%;
     font-family: $font-family;
     background-color: $background-color;
     color: $text-color;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
     background-image: url('../images/background-small.jpg');
     background-size: cover;
 }
 
 /* Wrapper */
 .page-wrapper {
-    width: 80%;
-    min-width: 501px;
-    max-width: 1200px;
-    margin: auto;
+    width: 95%;
+    margin: 0 auto;
     overflow: hidden;
-    padding: 20px;
+   /* padding: 20px; */
 }
 
 /* Introduction section */
@@ -157,7 +153,7 @@ a {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto 20px;
+    /* margin: 0 auto; */
 }
 
 /* Sidebar */
@@ -181,7 +177,7 @@ a {
 
     .design-selection {
         color: black;
-        width: 87%;
+        width: 95%;
 
         nav li {
             display: grid;
@@ -246,7 +242,7 @@ a {
     background-size: 500px 500px;
     background-repeat: no-repeat;
     background-position: center;
-    width: 500px;
+    width: 95%;
     height: 500px;
     filter: drop-shadow(0 0 10px rgb(0 0 0 / 50%));
 }

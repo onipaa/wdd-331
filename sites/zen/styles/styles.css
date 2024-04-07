@@ -1,5 +1,6 @@
 /* scratching the _breakpoint import in lieu of the github problem */
-@media screen and (min-width: 400px) and (max-width: 575px) {
+/* @media screen and (min-width: $breakpoint-small-min) and (max-width: $breakpoint-small-max) { */
+@media screen and (max-width: 575px) {
   /* Variables */
   @keyframes fade-in-down {
     from {
@@ -23,24 +24,20 @@
   }
   /* General body styling */
   body {
-    width: 85%;
+    width: 95%;
     font-family: "Arial", sans-serif;
     background-color: #f0f0f0;
     color: #333;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
     background-image: url("../images/background-small.jpg");
     background-size: cover;
   }
   /* Wrapper */
   .page-wrapper {
-    width: 80%;
-    min-width: 501px;
-    max-width: 1200px;
-    margin: auto;
+    width: 95%;
+    margin: 0 auto;
     overflow: hidden;
-    padding: 20px;
+    /* padding: 20px; */
   }
   /* Introduction section */
   .intro header {
@@ -124,7 +121,7 @@
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto 20px;
+    /* margin: 0 auto; */
   }
   /* Sidebar */
   .sidebar {
@@ -145,7 +142,7 @@
   }
   .sidebar .design-selection {
     color: black;
-    width: 87%;
+    width: 95%;
   }
   .sidebar .design-selection nav li {
     display: grid;
@@ -197,7 +194,7 @@
     background-size: 500px 500px;
     background-repeat: no-repeat;
     background-position: center;
-    width: 500px;
+    width: 95%;
     height: 500px;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
   }

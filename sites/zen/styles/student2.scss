@@ -52,6 +52,7 @@ body {
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: fade-in-down 2s ease-in-out;
 
     h1, h2 {
         margin: 0;
@@ -225,6 +226,16 @@ h3 {
             margin: 0;
         }
     }
+
+    .extra1 {
+    background-image: url("../images/zen-garden-logo.svg");
+    background-size: 500px 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 500px;
+    height: 500px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
     
 ////////////////////////////////////////////////////////////////////////// 
 ///////////////////////////////// Mixins /////////////////////////////////

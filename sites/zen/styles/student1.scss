@@ -41,7 +41,6 @@ $duration: 1s;
 /* General body styling */
 body {
     width: 85%;
-    padding: 10px;
     font-family: $font-family;
     background-color: $background-color;
     color: $text-color;
@@ -182,9 +181,6 @@ a {
 
     .design-selection {
         color: black;
-        grid-template-rows: repeat(10, 1fr);
-        grid-auto-rows: auto;
-        grid-gap: 10px;
         width: 87%;
 
         nav li {
@@ -252,5 +248,5 @@ a {
     background-position: center;
     width: 500px;
     height: 500px;
-    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0 0 10px rgb(0 0 0 / 50%));
 }

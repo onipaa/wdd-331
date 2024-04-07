@@ -14,7 +14,6 @@ $shadow-hover: rgb(0 0 0 / 75%);
 $name: slidein;
 $duration: 1s;
 
-/* Mixin for animations */
 @keyframes fade-in-down {
     from {
         opacity: 0;
@@ -41,6 +40,8 @@ $duration: 1s;
 
 /* General body styling */
 body {
+    width: 85%;
+    padding: 10px;
     font-family: $font-family;
     background-color: $background-color;
     color: $text-color;
@@ -59,11 +60,6 @@ body {
     margin: auto;
     overflow: hidden;
     padding: 20px;
-
-    @media screen and (width <= 500px) {
-        width: 85%;
-        padding: 10px;
-    }
 }
 
 /* Introduction section */

@@ -1,24 +1,21 @@
+/* scratching the _breakpoint import in lieu of the github problem */
+$breakpoint-small-min: 400px;
+$breakpoint-small-max: 575px;
+$breakpoint-medium-min: 576px;
+$breakpoint-medium-max: 775px;
+$breakpoint-large-min: 776px;
 
-@import '_breakpoints';
-
-@media (max-width: $small) {
+@media screen and (min-width: $breakpoint-small-min) and (max-width: $breakpoint-small-max) {
     @import 'student1';
 }
   
-@media (min-width: $small + 1) and (max-width: $medium) {
+@media screen and (min-width: $breakpoint-medium-min) and (max-width: $breakpoint-medium-max) {
     @import 'student2';
 }
-  
-@media (min-width: $medium + 1) and (max-width: $large) {
-    @import 'student3';
-}
-  
-// Import default SCSS file for large screens
-@media (min-width: $large + 1) {
-    // Import a default file or any other SCSS file you want for large screens
-    @import 'student3';
-}
 
+@media screen and (min-width: $breakpoint-large-min) {
+    @import 'student3';
+}
 
 /* 
 ************************************************************************************************************************

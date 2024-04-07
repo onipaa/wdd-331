@@ -1,3 +1,4 @@
+``` markdown
 # PROJECT STRUCTURE
 zen
 ├── README.md
@@ -42,3 +43,4 @@ zen
     - $> cd zen/styles
     - $> sass main.scss styles.css
     - Run the live server to view the website
+```
